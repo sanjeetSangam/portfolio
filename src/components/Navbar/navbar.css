@@ -1,0 +1,97 @@
+.navabr {
+  background-color: #01154d;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  z-index: 12;
+  color: white;
+  font-size: 23px;
+}
+
+.logo {
+  background: yellow;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menus {
+  /* background-color: yellow; */
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menus ul {
+  width: 100%;
+  /* background-color: rgb(255, 255, 255); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.menus ul li a {
+  width: 100px;
+  height: 40px;
+  /* border: 1px solid red; */
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.menus ul li a:hover {
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+}
+
+@media screen and (min-width: 400px) and (max-width: 612px) {
+  .menus {
+    width: 100%;
+    height: auto;
+    width: auto;
+    /* border: 1px solid red; */
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .menus {
+    /* border: 1px solid red; */
+    height: auto;
+    width: 95%;
+    justify-content: center;
+    transition: 1s;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .menus ul {
+    width: auto;
+    justify-content: center;
+  }
+
+  li a {
+    width: 5px;
+    height: 5px;
+    font-size: 0.67em;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+  }
+}

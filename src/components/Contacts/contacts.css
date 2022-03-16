@@ -1,0 +1,85 @@
+.contact {
+  height: 100vh;
+  background: white;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-main {
+  /* border: 1px solid rgb(156, 5, 5); */
+  height: 80%;
+  width: 90%;
+  margin-top: 0px;
+  z-index: 3;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.contact-main .main-PR {
+  width: 500px;
+  font-size: 2em;
+}
+
+.links-social {
+  /* border: 1px solid red; */
+  margin: auto;
+  margin-top: 20px;
+  height: 30%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-social .icons {
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links-social .icons ion-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.email-no {
+  /* border: 1px solid red; */
+  margin: auto;
+  height: 100px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-no p {
+  font-size: 1.9em;
+}
+
+@media screen and (min-width: 0) and (max-width: 726px) {
+  .contact-main .main-PR {
+    width: 300px;
+  }
+
+  .links-social .icons {
+    width: auto;
+    gap: 15px;
+  }
+
+  .links-social .icons ion-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .email-no p {
+    font-size: 1em;
+  }
+}
