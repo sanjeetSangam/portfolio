@@ -40,7 +40,7 @@ export const Contact = () => {
           <article className="contact__option">
             <MdEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>asanjeetsangam15@gmail.com</h5>
+            <h5 id="mail">asanjeetsangam15@gmail.com</h5>
             <a href="mailto:asanjeetsangam15@gmail.com" target="_blank">
               Send a message
             </a>
