@@ -3,6 +3,8 @@ import RSbtn from "./RSbtn";
 import "./home.css";
 
 import ME from "../../assets/sanjeet.png";
+
+import sanjeet from "../../assets/sangam.png";
 import HeaderSocials from "./HeaderSocials";
 
 import Typewriter from "typewriter-effect";
@@ -24,7 +26,7 @@ const Home = () => {
           ></Typewriter>
         </h1>
 
-        <h5>Full Stack Developer</h5>
+        <h4>Full Stack Developer</h4>
         <h5 className="about__cont">
           I am a Full Stack web developer. I love programming and also love to
           make wonderful web apps. I will love to contribute more in this field
@@ -37,7 +39,7 @@ const Home = () => {
         <HeaderSocials />
 
         <div className="me">
-          <img src={ME} alt="" />
+          <img src={sanjeet} alt="" />
         </div>
 
         <a href="#contact" className="scroll_down">

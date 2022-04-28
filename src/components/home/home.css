@@ -14,10 +14,17 @@ header {
   transform: scale(1.1);
 }
 
-.home__container > h5 {
+.home__container > h4 {
   width: 60%;
   margin: auto;
   font-size: 0.9rem;
+}
+
+.about__cont {
+  width: 60%;
+  margin: auto;
+  margin-top: 1rem;
+  color: rgb(129, 235, 253);
 }
 
 /* buttons */
@@ -40,7 +47,7 @@ header {
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
-  padding: 5rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   transition: var(--transition);
 }
 
@@ -98,12 +105,15 @@ header {
     padding-top: 2rem;
   }
 
+  .home__container > h1 {
+    font-size: 1.5rem;
+  }
+
   .home__container > .about__cont {
     display: none;
   }
 
-  .header__socials,
-  .scroll_down {
-    display: none;
+  .header__socials {
+    top: 0;
   }
 }

@@ -5,6 +5,8 @@ import "./projects.css";
 import ikea from "../../assets/ikea.png";
 import h_m from "../../assets/h&m.png";
 import vrbo from "../../assets/vrbo.png";
+import facebook from "../../assets/facebook.png";
+import whatsapp from "../../assets/whatsapp.png";
 
 import html from "../../assets/icons/html.png";
 import css from "../../assets/icons/css.jpg";
@@ -15,6 +17,7 @@ import github from "../../assets/icons/github.png";
 import git from "../../assets/icons/git.png";
 import vscode from "../../assets/icons/vscode.png";
 import react from "../../assets/icons/react.png";
+import firebase from "../../assets/icons/firebase.png";
 
 const data = [
   {
@@ -32,7 +35,7 @@ const data = [
     image: ikea,
     title: "IKEA CLONE",
     github: "https://github.com/sanjeetSangam/ikea-frontend-clone",
-    demo: "https://ikea-clone-frontend-masai.herokuapp.com/home.html",
+    demo: "https://sanjeetsangam.github.io/ikea-frontend-clone/public/home.html",
     projectType: "Group Project",
     des: "IKEA is a global leader in life at home. Founded in Sweden in 1943, IKEA is now a worldwide retailer of affordable, well-designed products and solutions for every room in your home.",
     techStach: [html, css, js, vscode, git, github, mongo, node],
@@ -46,6 +49,26 @@ const data = [
     projectType: "Group Project",
     des: "Vrbo connects homeowners with families and vacationers looking for something more than a hotel for their trip.",
     techStach: [html, css, js, vscode, git, github, react],
+  },
+  {
+    id: 4,
+    image: facebook,
+    title: "Facebook CLONE",
+    github: "https://github.com/sanjeetSangam/facebook-inspired-clone",
+    demo: "https://fb-inspired-clone.netlify.app/",
+    projectType: "Personal Project",
+    des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react, firebase],
+  },
+  {
+    id: 5,
+    image: whatsapp,
+    title: "Whatsapp CLONE",
+    github: "https://github.com/sanjeetSangam/whatsapp",
+    demo: "https://whatsapp-inspired.netlify.app/",
+    projectType: "Group Project",
+    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react, firebase],
   },
 ];
 
