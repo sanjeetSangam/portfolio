@@ -55,7 +55,7 @@ const data = [
     image: facebook,
     title: "Facebook CLONE",
     github: "https://github.com/sanjeetSangam/facebook-inspired-clone",
-    demo: "https://fb-inspired-clone.netlify.app/",
+    demo: "https://facebook-in.netlify.app/",
     projectType: "Personal Project",
     des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
     techStach: [html, css, js, vscode, git, github, react, firebase],
