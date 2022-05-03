@@ -24,6 +24,7 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: var(--color-primary);
+  /* color: var(--color-box-text); */
 }
 
 .skills__content {

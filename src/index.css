@@ -11,11 +11,15 @@
 }
 
 :root {
-  --color-bg: #091e20e3;
+  /* --color-bg: #091e20e3; */
+  --color-bg: #0e0207e3;
   --color-bg-variant: #08232bf5;
-  --color-primary: #4fbdd8;
+  --color-primary: #6eb5d1;
+  /* --color-primary: #4fbdd8; */
   --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: rgba(66, 5, 5, 0.993);
   --color-white: rgba(255, 255, 255, 0.993);
+  /* --color-box-text: rgba(255, 255, 255, 0.993); */
   --color-light: rgba(255, 255, 255, 0.6);
 
   --transition: all 400ms ease;
@@ -35,23 +39,25 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--color-bg);
-  background-image: url("./assets/bg-texture.png");
+  /* background: var(--color-bg); */
+  /* background: linear-gradient(#404040, #151415); */
+  background: rgb(1, 1, 24);
   color: var(--color-white);
+  min-height: 100vh;
   line-height: 1.7;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgb(0, 204, 255), rgb(1, 27, 43));
-  clip-path: circle(30% at right 70%);
+  background: linear-gradient(rgb(7, 0, 48), rgb(0, 3, 14));
+  clip-path: circle(20% at right 70%);
   z-index: -1;
-}
+} */
 
 body::after {
   content: "";
@@ -61,8 +67,8 @@ body::after {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgb(107, 40, 40), rgb(10, 10, 10));
-  clip-path: circle(20% at 10% 10%);
-  z-index: -1;
+  clip-path: circle(20% at 10% 50%);
+  z-index: -3;
 }
 
 /*   ========= GENERAL STYELS =========   */

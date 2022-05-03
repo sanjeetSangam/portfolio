@@ -1,33 +1,50 @@
 nav {
-    background: rgba(0, 0, 0, 0.3);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    display: flex;
-    gap: 0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.356);
+  width: 100%;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  background: transparent;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  display: flex;
+  /* color: var(--color-light); */
+  color: rgb(41, 2, 2);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.menus__nav {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.logo__nav > a {
+  color: white;
+  font-weight: bold;
+  background: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .logo__nav {
+    display: none;
   }
-  
-  nav a {
-    background: transparent;
-    padding: 0.9rem;
-    border-radius: 50%;
-    display: flex;
-    color: var(--color-light);
-    font-size: 1.1rem;
-  }
-  
-  nav a:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  nav a.active {
-    background: var(--color-primary);
-    color: var(--color-bg);
-  }
+}

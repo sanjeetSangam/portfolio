@@ -9,48 +9,58 @@ import "./navbar.css";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#");
-  
+
   return (
     <nav>
-      <a
-        href="#"
-        onClick={() => {
-          setActiveNav("#");
-        }}
-        className={activeNav === "#" ? "active" : ""}
-      >
-        <AiFillHome />
-      </a>
+      <div className="logo__nav">
+        <a href="#"> Sanjeet</a>
+      </div>
 
-      <a
-        href="#skills"
-        onClick={() => {
-          setActiveNav("#skills");
-        }}
-        className={activeNav === "#skills" ? "active" : ""}
-      >
-        <MdLibraryBooks />
-      </a>
+      <div className="menus__nav">
+        <a
+          href="#"
+          onClick={() => {
+            setActiveNav("#");
+          }}
+          className={activeNav === "#" ? "active" : ""}
+        >
+          {/* <AiFillHome /> */}
+          Home
+        </a>
 
-      <a
-        href="#projects"
-        onClick={() => {
-          setActiveNav("#projects");
-        }}
-        className={activeNav === "#projects" ? "active" : ""}
-      >
-        <BsEmojiHeartEyesFill />
-      </a>
+        <a
+          href="#skills"
+          onClick={() => {
+            setActiveNav("#skills");
+          }}
+          className={activeNav === "#skills" ? "active" : ""}
+        >
+          {/* <MdLibraryBooks /> */}
+          Skills
+        </a>
 
-      <a
-        href="#contact"
-        onClick={() => {
-          setActiveNav("#contact");
-        }}
-        className={activeNav === "#contact" ? "active" : ""}
-      >
-        <AiFillContainer />
-      </a>
+        <a
+          href="#projects"
+          onClick={() => {
+            setActiveNav("#projects");
+          }}
+          className={activeNav === "#projects" ? "active" : ""}
+        >
+          {/* <BsEmojiHeartEyesFill /> */}
+          Projects
+        </a>
+
+        <a
+          href="#contact"
+          onClick={() => {
+            setActiveNav("#contact");
+          }}
+          className={activeNav === "#contact" ? "active" : ""}
+        >
+          {/* <AiFillContainer /> */}
+          Contact
+        </a>
+      </div>
     </nav>
   );
 };
