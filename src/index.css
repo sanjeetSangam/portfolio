@@ -45,6 +45,7 @@ body {
   color: var(--color-white);
   min-height: 100vh;
   line-height: 1.7;
+  position: relative;
 }
 
 /* body::before {

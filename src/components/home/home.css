@@ -1,5 +1,7 @@
 header {
   height: 95vh;
+  padding-bottom: 2rem;
+  /* height: max-content; */
   overflow: hidden;
 }
 
@@ -133,8 +135,9 @@ header {
 
 @media screen and (max-width: 1024px) {
   header {
-    height: 100vh;
+    height: max-content;
     padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 
   .about__myself > .about__cont {
@@ -156,8 +159,9 @@ header {
 
 @media screen and (max-width: 600px) {
   header {
-    height: 90vh;
+    height: max-content;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .home__container {
@@ -195,11 +199,24 @@ header {
     display: none;
   }
 
+  .me__image {
+    width: 300px;
+  }
+
+  .me {
+    width: 100%;
+  }
+
   .me__image:hover .me > img {
     opacity: 0.1;
   }
 
   .me__image:hover .my__about {
     opacity: 1;
+  }
+
+  .RSbtn {
+    flex-direction: column;
+    align-items: center;
   }
 }

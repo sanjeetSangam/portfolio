@@ -13,7 +13,20 @@ nav {
   backdrop-filter: blur(15px);
 }
 
-nav a {
+.big__screen {
+  background: rgba(255, 255, 255, 0.356);
+  width: 100%;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  backdrop-filter: blur(15px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.big__screen a {
   background: transparent;
   padding: 0.5rem 0.9rem;
   border-radius: 0.5rem;
@@ -23,11 +36,11 @@ nav a {
   font-size: 1.1rem;
 }
 
-nav a:hover {
+.big__screen a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-nav a.active {
+.big__screen a.active {
   background: var(--color-primary);
   color: var(--color-bg);
 }
@@ -43,8 +56,46 @@ nav a.active {
   background: #000;
 }
 
+.small__screen {
+  z-index: 1500;
+  display: none;
+}
+
+.small__screen img {
+  height: 20px;
+  width: 20px;
+}
+
+.small__screen__menus {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: rgb(0, 0, 27);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.small__screen__menus a {
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
-  .logo__nav {
+  .big__screen {
     display: none;
+  }
+
+  .small__screen {
+    display: block;
+  }
+
+  nav {
+    justify-content: flex-end;
+    background: none;
   }
 }
