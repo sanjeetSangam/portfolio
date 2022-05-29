@@ -6,7 +6,8 @@ import ikea from "../../assets/ikea.png";
 import h_m from "../../assets/h&m.png";
 import vrbo from "../../assets/vrbo.png";
 import facebook from "../../assets/facebook.png";
-import whatsapp from "../../assets/whatsapp.png";
+// import whatsapp from "../../assets/whatsapp.png";
+import saashi from "../../assets/saashi1.png";
 
 import html from "../../assets/icons/html.png";
 import css from "../../assets/icons/css.jpg";
@@ -18,27 +19,18 @@ import git from "../../assets/icons/git.png";
 import vscode from "../../assets/icons/vscode.png";
 import react from "../../assets/icons/react.png";
 import firebase from "../../assets/icons/firebase.png";
+import socket from "../../assets/icons/socket.png";
 
 const data = [
   {
-    id: 1,
-    image: h_m,
-    title: "H & M CLONE",
-    github: "https://github.com/AkshayThakur1995/H-and-M-Project",
-    demo: "https://akshaythakur1995.github.io/H-and-M-Project",
-    projectType: "Group Project",
-    des: "H&M Group is a family of brands and businesses, making it possible for customers around the world to express themselves through fashion and design, and to choose a more sustainable lifestyle.",
-    techStach: [html, css, js, vscode, git, github],
-  },
-  {
-    id: 2,
-    image: ikea,
-    title: "IKEA CLONE",
-    github: "https://github.com/sanjeetSangam/ikea-frontend-clone",
-    demo: "https://sanjeetsangam.github.io/ikea-frontend-clone/public/home.html",
-    projectType: "Group Project",
-    des: "IKEA is a global leader in life at home. Founded in Sweden in 1943, IKEA is now a worldwide retailer of affordable, well-designed products and solutions for every room in your home.",
-    techStach: [html, css, js, vscode, git, github, mongo, node],
+    id: 6,
+    image: saashi,
+    title: "SAASHI",
+    github: "https://github.com/sanjeetSangam/saashi-client",
+    demo: "https://saashi.netlify.app/",
+    projectType: "Personal Project",
+    des: "SASSHI is a chat web app that is made for the chatting between friends and in also groups",
+    techStach: [react, socket, node, css, js, vscode, git, github],
   },
   {
     id: 3,
@@ -55,20 +47,30 @@ const data = [
     image: facebook,
     title: "Facebook CLONE",
     github: "https://github.com/sanjeetSangam/facebook-inspired-clone",
-    demo: "https://facebook-in.netlify.app/",
+    demo: "https://posting-app.netlify.app/",
     projectType: "Personal Project",
     des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
     techStach: [html, css, js, vscode, git, github, react, firebase],
   },
   {
-    id: 5,
-    image: whatsapp,
-    title: "Whatsapp CLONE",
-    github: "https://github.com/sanjeetSangam/whatsapp",
-    demo: "https://whatsapp-inspired.netlify.app/",
+    id: 2,
+    image: ikea,
+    title: "IKEA CLONE",
+    github: "https://github.com/sanjeetSangam/ikea-frontend-clone",
+    demo: "https://sanjeetsangam.github.io/ikea-frontend-clone/public/home.html",
     projectType: "Group Project",
-    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
-    techStach: [html, css, js, vscode, git, github, react, firebase],
+    des: "IKEA is a global leader in life at home. Founded in Sweden in 1943, IKEA is now a worldwide retailer of affordable, well-designed products and solutions for every room in your home.",
+    techStach: [html, css, js, vscode, git, github, mongo, node],
+  },
+  {
+    id: 1,
+    image: h_m,
+    title: "H & M CLONE",
+    github: "https://github.com/AkshayThakur1995/H-and-M-Project",
+    demo: "https://akshaythakur1995.github.io/H-and-M-Project",
+    projectType: "Group Project",
+    des: "H&M Group is a family of brands and businesses, making it possible for customers around the world to express themselves through fashion and design, and to choose a more sustainable lifestyle.",
+    techStach: [html, css, js, vscode, git, github],
   },
 ];
 
@@ -119,3 +121,19 @@ const Projects = () => {
 };
 
 export default Projects;
+
+`
+,
+  {
+    id: 5,
+    image: whatsapp,
+    title: "Whatsapp CLONE",
+    github: "https://github.com/sanjeetSangam/whatsapp",
+    demo: "https://whatsapp-98d31.web.app/",
+    projectType: "Group Project",
+    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react, mongo],
+  },
+
+
+`;
