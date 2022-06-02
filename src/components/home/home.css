@@ -47,7 +47,8 @@ header {
 /* img */
 
 .me {
-  background: #060120;
+  /* background: #060120; */
+  height: 100%;
   width: 22rem;
   overflow: hidden;
   padding: 3rem 0 0 0;
@@ -64,7 +65,7 @@ header {
   margin-top: 3rem;
 }
 
-.glowing__border::before {
+/* .glowing__border::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -85,12 +86,12 @@ header {
   background: #fff;
   z-index: -2;
   filter: blur(40px);
-}
+} */
 
-.glowing__border::before,
+/* .glowing__border::before,
 .glowing__border::after {
   background: linear-gradient(235deg, #89ff00, #060c21, #00bcd4);
-}
+} */
 
 .my__about {
   position: absolute;

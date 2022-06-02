@@ -14,7 +14,7 @@ const Home = () => {
     <header id="home">
       <div className="container home__container">
         <div className="about__myself">
-          <h5>Hello I'm</h5>
+          <h5 style={{ color: "yellow" }}>Hello I'm</h5>
 
           <h1>
             <Typewriter
@@ -27,13 +27,39 @@ const Home = () => {
             ></Typewriter>
           </h1>
 
-          <h4>Full Stack Developer</h4>
+          <h4
+            style={{
+              color: "red",
+              fontWeight: "bold",
+              background: "yellow",
+              padding: "0.2rem 1rem",
+              width: "max-content",
+              margin: "auto",
+            }}
+          >
+            Full Stack Developer
+          </h4>
           <h5 className="about__cont">
-            I am a Full Stack web developer. I love programming and also love to
-            make wonderful web apps. I will love to contribute more in this
-            field and also I will be love to face new challenges in the upcoming
-            days. Apart from coding, Drawing is my favorite which I like the
-            most.
+            I am a{" "}
+            <span
+              style={{
+                color: "white",
+                fontWeight: "bold",
+                background: "red",
+                padding: "0.2rem",
+              }}
+            >
+              Full Stack web developer
+            </span>
+            . I love programming and also love to make wonderful web apps. I
+            will love to contribute more in this field and also I will be love
+            to face new challenges in the upcoming days. Apart from coding,{" "}
+            <span
+              style={{ color: "skyblue", background: "red", padding: "0.2rem" }}
+            >
+              Drawing{" "}
+            </span>
+             is my favorite which I like the most.
           </h5>
           <RSbtn />
         </div>

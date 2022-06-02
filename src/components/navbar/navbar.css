@@ -1,5 +1,5 @@
 nav {
-  background: rgba(255, 255, 255, 0.356);
+  background: rgba(42, 143, 201, 0.356);
   width: 100%;
   display: block;
   padding: 0.7rem 1.7rem;
@@ -14,7 +14,7 @@ nav {
 }
 
 .big__screen {
-  background: rgba(255, 255, 255, 0.356);
+  background: rgba(22, 117, 13, 0.356);
   width: 100%;
   display: block;
   padding: 0.7rem 1.7rem;
@@ -32,7 +32,7 @@ nav {
   border-radius: 0.5rem;
   display: flex;
   /* color: var(--color-light); */
-  color: rgb(41, 2, 2);
+  color: rgb(247, 247, 247);
   font-size: 1.1rem;
 }
 
