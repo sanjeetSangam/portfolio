@@ -1,12 +1,12 @@
 import React from "react";
-
+import Carousel from "react-elastic-carousel";
 import "./projects.css";
 
 import ikea from "../../assets/ikea.png";
 import h_m from "../../assets/h&m.png";
 import vrbo from "../../assets/vrbo.png";
 import facebook from "../../assets/facebook.png";
-// import whatsapp from "../../assets/whatsapp.png";
+import whatsapp from "../../assets/whatsapp.png";
 import saashi from "../../assets/saashi1.png";
 
 import html from "../../assets/icons/html.png";
@@ -53,6 +53,16 @@ const data = [
     techStach: [html, css, js, vscode, git, github, react, firebase],
   },
   {
+    id: 5,
+    image: whatsapp,
+    title: "Whatsapp CLONE",
+    github: "https://github.com/sanjeetSangam/whatsapp",
+    demo: "https://chat-wht.netlify.app/",
+    projectType: "Group Project",
+    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react, mongo],
+  },
+  {
     id: 2,
     image: ikea,
     title: "IKEA CLONE",
@@ -75,46 +85,62 @@ const data = [
 ];
 
 const Projects = () => {
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width:850, itemsToShow: 2 },
+    { width: 1200, itemsToShow: 3 },
+  ];
   return (
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Projects ({data.length}) </h2>
 
       <div className="container projects__container">
-        {data.map(
-          ({ id, image, title, github, demo, projectType, des, techStach }) => {
-            return (
-              <article key={id} className="projects__item">
-                <div className="projects__item-image">
-                  <img src={image} alt="" />
-                </div>
-                <h3>{title}</h3>
+        <Carousel breakPoints={breakPoints}>
+          {data.map(
+            ({
+              id,
+              image,
+              title,
+              github,
+              demo,
+              projectType,
+              des,
+              techStach,
+            }) => {
+              return (
+                <article key={id} className="projects__item">
+                  <div className="projects__item-image">
+                    <img src={image} alt="" />
+                    <div className="back"></div>
+                    <h5 className="desc">{des}</h5>
+                  </div>
+                  <h3>{title}</h3>
 
-                <h5>{projectType}</h5>
+                  <h5>{projectType}</h5>
 
-                <h5>{des}</h5>
+                  <div className="tech_stacks">
+                    {techStach.map((e) => {
+                      return (
+                        <div>
+                          <img src={e} />
+                        </div>
+                      );
+                    })}
+                  </div>
 
-                <div className="tech_stacks">
-                  {techStach.map((e) => {
-                    return (
-                      <div>
-                        <img src={e} />
-                      </div>
-                    );
-                  })}
-                </div>
-
-                <div className="projects__item-cta">
-                  <a href={github} className="btn" target="_blank">
-                    Github
-                  </a>
-                  <a href={demo} className="btn btn-primary" target="_blank">
-                    Live Demo
-                  </a>
-                </div>
-              </article>
-            );
-          }
-        )}
+                  <div className="projects__item-cta">
+                    <a href={github} className="btn" target="_blank">
+                      Github
+                    </a>
+                    <a href={demo} className="btn btn-primary" target="_blank">
+                      Live Demo
+                    </a>
+                  </div>
+                </article>
+              );
+            }
+          )}
+        </Carousel>
       </div>
     </section>
   );
@@ -124,16 +150,7 @@ export default Projects;
 
 `
 ,
-  {
-    id: 5,
-    image: whatsapp,
-    title: "Whatsapp CLONE",
-    github: "https://github.com/sanjeetSangam/whatsapp",
-    demo: "https://whatsapp-98d31.web.app/",
-    projectType: "Group Project",
-    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
-    techStach: [html, css, js, vscode, git, github, react, mongo],
-  },
+  
 
 
 `;

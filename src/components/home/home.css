@@ -7,7 +7,7 @@ header {
 
 .home__container {
   text-align: center;
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: center;
   position: relative;
@@ -48,6 +48,7 @@ header {
 
 .me {
   /* background: #060120; */
+  border-bottom: 5px solid white;
   height: 100%;
   width: 22rem;
   overflow: hidden;
@@ -95,7 +96,7 @@ header {
 
 .my__about {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translate(0, -50%);
   padding: 0.5rem;
   opacity: 0;
@@ -130,7 +131,7 @@ header {
 .scroll_down {
   position: absolute;
   right: -2.3rem;
-  bottom: 5rem;
+  bottom: 1rem;
   font-size: 0.9rem;
 }
 
@@ -154,6 +155,7 @@ header {
   }
 
   .me__image:hover .my__about {
+    top: 50%;
     opacity: 1;
   }
 }
@@ -178,18 +180,22 @@ header {
   }
 
   .header__socials {
+    height: 3rem;
     background: rgba(2, 1, 20, 0.3);
     backdrop-filter: blur(15px);
-    width: max-content;
     padding: 0.5rem 2rem;
-    align-items: center;
+    display: grid;
     gap: 2rem;
-    flex-direction: row;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
     left: 50%;
     transform: translate(-50%);
     bottom: 2rem;
     z-index: 500;
+  }
+
+  .header__socials > a {
+    margin: 0;
+    padding: 0;
   }
 
   .header__socials::after {

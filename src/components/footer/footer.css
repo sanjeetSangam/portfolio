@@ -1,0 +1,7 @@
+footer {
+  padding: 0.5rem 3rem;
+  background: rgb(61, 15, 3);
+  display: grid;
+  place-content: center;
+  color: rgb(255, 255, 255);
+}

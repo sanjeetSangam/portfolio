@@ -1,21 +1,18 @@
 .projects__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90vw;
+  margin: auto;
+  margin-top: 0.2rem;
 }
 
 .projects__item {
+  width: 80%;
   background: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
-}
-
-.projects__item:hover {
-  border-color: var(--color-primary-variant);
-  background: transparent;
-  transform: scale(1.1);
 }
 
 .projects__item h5 {
@@ -25,6 +22,38 @@
 .projects__item-image {
   border-radius: 1.5rem 0;
   overflow: hidden;
+  position: relative;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  background: rgba(1, 10, 27, 0.767);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.projects__item-image h5 {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  z-index: 100;
+  transform: translate(-5%, -50%);
+  transition: var(--transition);
+  color: rgb(255, 255, 255);
+  opacity: 0;
+}
+
+.projects__item-image:hover .back {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.projects__item-image:hover h5 {
+  opacity: 1;
+  top: 50%;
 }
 
 .tech_stacks {
@@ -72,7 +101,15 @@
 
 @media screen and (max-width: 600px) {
   .projects__container {
+    width: 100vw;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .projects__item {
+    width: 100%;
+  }
+
+  .projects__item-cta {
+    flex-direction: column;
   }
 }

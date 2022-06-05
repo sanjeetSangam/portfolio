@@ -1,5 +1,6 @@
 nav {
-  background: rgba(42, 143, 201, 0.356);
+  background: transparent;
+  /* background: rgb(188, 213, 228); */
   width: 100%;
   display: block;
   padding: 0.7rem 1.7rem;
@@ -14,14 +15,14 @@ nav {
 }
 
 .big__screen {
-  background: rgba(22, 117, 13, 0.356);
+  /* background: rgb(13, 84, 117); */
   width: 100%;
   display: block;
   padding: 0.7rem 1.7rem;
   display: flex;
   justify-content: space-between;
   gap: 0.8rem;
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -53,7 +54,7 @@ nav {
 .logo__nav > a {
   color: white;
   font-weight: bold;
-  background: #000;
+  background: rgb(1, 8, 31);
 }
 
 .small__screen {

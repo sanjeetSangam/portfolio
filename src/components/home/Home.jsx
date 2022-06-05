@@ -1,12 +1,9 @@
 import React from "react";
 import RSbtn from "./RSbtn";
 import "./home.css";
-
 import ME from "../../assets/sanjeet.png";
-
 import sanjeet from "../../assets/sangam.png";
 import HeaderSocials from "./HeaderSocials";
-
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
@@ -37,29 +34,18 @@ const Home = () => {
               margin: "auto",
             }}
           >
-            Full Stack Developer
+            Full Stack Web Developer
           </h4>
           <h5 className="about__cont">
-            I am a{" "}
-            <span
-              style={{
-                color: "white",
-                fontWeight: "bold",
-                background: "red",
-                padding: "0.2rem",
-              }}
-            >
-              Full Stack web developer
-            </span>
-            . I love programming and also love to make wonderful web apps. I
-            will love to contribute more in this field and also I will be love
-            to face new challenges in the upcoming days. Apart from coding,{" "}
+            I love programming and also love to make wonderful web apps. I will
+            love to contribute more in this field and also I will be love to
+            face new challenges in the upcoming days. Apart from coding,{" "}
             <span
               style={{ color: "skyblue", background: "red", padding: "0.2rem" }}
             >
               Drawing{" "}
             </span>
-             is my favorite which I like the most.
+            is my favorite which I like the most.
           </h5>
           <RSbtn />
         </div>
@@ -73,11 +59,10 @@ const Home = () => {
             </div>
 
             <div className="my__about">
-              I am a Full Stack web developer. I love programming and also love
-              to make wonderful web apps. I will love to contribute more in this
-              field and also I will be love to face new challenges in the
-              upcoming days. Apart from coding, Drawing is my favorite which I
-              like the most.
+              I love programming and also love to make wonderful web apps. I
+              will love to contribute more in this field and also I will be love
+              to face new challenges in the upcoming days. Apart from coding,
+              Drawing is my favorite which I like the most.
             </div>
           </div>
         </div>
