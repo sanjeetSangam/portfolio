@@ -23,19 +23,19 @@ import socket from "../../assets/icons/socket.png";
 
 const data = [
   {
-    id: 6,
+    id: 1,
     image: saashi,
     title: "SAASHI",
     github: "https://github.com/sanjeetSangam/saashi-client",
     demo: "https://saashi.netlify.app/",
-    projectType: "Personal Project",
+    projectType: "Solo Project",
     des: "SASSHI is a chat web app that is made for the chatting between friends and in also groups",
-    techStach: [react, socket, node, css, js, vscode, git, github],
+    techStach: [react, mongo, socket, node, css, js, vscode, git, github],
   },
   {
-    id: 3,
+    id: 2,
     image: vrbo,
-    title: "VRBO CLONE",
+    title: "VRBO",
     github: "https://github.com/sanjeetSangam/vrbo-clone",
     demo: "https://vrbo-clone-unit5.netlify.app",
     projectType: "Group Project",
@@ -43,29 +43,9 @@ const data = [
     techStach: [html, css, js, vscode, git, github, react],
   },
   {
-    id: 4,
-    image: facebook,
-    title: "Facebook CLONE",
-    github: "https://github.com/sanjeetSangam/facebook-inspired-clone",
-    demo: "https://posting-app.netlify.app/",
-    projectType: "Personal Project",
-    des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
-    techStach: [html, css, js, vscode, git, github, react, firebase],
-  },
-  {
-    id: 5,
-    image: whatsapp,
-    title: "Whatsapp CLONE",
-    github: "https://github.com/sanjeetSangam/whatsapp",
-    demo: "https://chat-wht.netlify.app/",
-    projectType: "Group Project",
-    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
-    techStach: [html, css, js, vscode, git, github, react, mongo],
-  },
-  {
-    id: 2,
+    id: 3,
     image: ikea,
-    title: "IKEA CLONE",
+    title: "IKEA",
     github: "https://github.com/sanjeetSangam/ikea-frontend-clone",
     demo: "https://sanjeetsangam.github.io/ikea-frontend-clone/public/home.html",
     projectType: "Group Project",
@@ -73,9 +53,40 @@ const data = [
     techStach: [html, css, js, vscode, git, github, mongo, node],
   },
   {
-    id: 1,
+    id: 4,
+    image: facebook,
+    title: "Facebook",
+    github: "https://github.com/sanjeetSangam/facebook-inspired-clone",
+    demo: "https://posting-app.netlify.app/",
+    projectType: "Solo Project",
+    des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react, firebase],
+  },
+
+  {
+    id: 5,
+    image: "https://pbs.twimg.com/media/FUspndVUUAAibt5?format=jpg&name=large",
+    title: "Youtube",
+    github: "https://github.com/sanjeetSangam/youtube",
+    demo: "https://youtube-san.netlify.app/",
+    projectType: "Solo Project",
+    des: "Youtube is social-media platform where content creator used to give their content and viewers used to consume those content.",
+    techStach: [html, css, js, vscode, git, github, react],
+  },
+  {
+    id: 6,
+    image: whatsapp,
+    title: "Whatsapp",
+    github: "https://github.com/sanjeetSangam/whatsapp",
+    demo: "https://chat-wht.netlify.app/",
+    projectType: "Group Project",
+    des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
+    techStach: [html, css, js, vscode, git, github, react],
+  },
+  {
+    id: 7,
     image: h_m,
-    title: "H & M CLONE",
+    title: "H & M",
     github: "https://github.com/AkshayThakur1995/H-and-M-Project",
     demo: "https://akshaythakur1995.github.io/H-and-M-Project",
     projectType: "Group Project",
@@ -87,7 +98,7 @@ const data = [
 const Projects = () => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width:850, itemsToShow: 2 },
+    { width: 850, itemsToShow: 2 },
     { width: 1200, itemsToShow: 3 },
   ];
   return (
@@ -147,10 +158,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-`
-,
-  
-
-
-`;
