@@ -13,8 +13,8 @@
 :root {
   /* --color-bg: #091e20e3; */
   --color-bg: #0e0207e3;
-  --color-bg-variant: #0c182ef5;
-  /* --color-bg-variant: #08232bf5; */
+  /* --color-bg-variant: #0c182ef5; */
+  --color-bg-variant: rgb(39, 5, 33);
   --color-primary: #6eb5d1;
   /* --color-primary: #4fbdd8; */
   --color-primary-variant: rgba(77, 181, 255, 0.4);
@@ -41,9 +41,8 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   /* background: var(--color-bg); */
-  background: linear-gradient(to left, #020103 40%, #5f1d28 90%);
-  /* background: rgb(8, 71, 107); */
-  /* background: rgb(36, 97, 155); */
+  /* background: linear-gradient(to left, #020103 40%, #5f1d28 90%); */
+  background: rgb(7, 1, 26);
   color: var(--color-white);
   min-height: 100vh;
   line-height: 1.7;

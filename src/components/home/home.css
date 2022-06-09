@@ -18,7 +18,7 @@ header {
 }
 
 .about__myself {
-  width: 70%;
+  width: 55%;
 }
 
 .home__container > h4 {
@@ -32,6 +32,7 @@ header {
   margin: auto;
   margin-top: 1rem;
   color: var(--color-white);
+  /* color: black; */
   text-decoration: solid;
 }
 
@@ -46,18 +47,27 @@ header {
 
 /* img */
 
+.me__image {
+  width: 45%;
+}
+
+.bgHome {
+  position: absolute;
+  z-index: -1;
+}
+
 .me {
   /* background: #060120; */
   border-bottom: 5px solid white;
   height: 100%;
-  width: 22rem;
+  /* width: 50%; */
   overflow: hidden;
   padding: 3rem 0 0 0;
   transition: var(--transition);
 }
 
 .me img {
-  width: 100%;
+  height: 100%;
   transition: var(--transition);
 }
 
@@ -149,15 +159,6 @@ header {
   .home__container {
     flex-direction: column;
   }
-
-  .me__image:hover .me > img {
-    opacity: 0.1;
-  }
-
-  .me__image:hover .my__about {
-    top: 50%;
-    opacity: 1;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -175,13 +176,13 @@ header {
     font-size: 1.5rem;
   }
 
-  .about__myself > .about__cont {
-    display: none;
+  .about__myself {
+    width: 100%;
   }
 
   .header__socials {
     height: 3rem;
-    background: rgba(2, 1, 20, 0.3);
+    background: rgba(2, 1, 20, 0.397);
     backdrop-filter: blur(15px);
     padding: 0.5rem 2rem;
     display: grid;
@@ -191,6 +192,7 @@ header {
     transform: translate(-50%);
     bottom: 2rem;
     z-index: 500;
+    border-radius: 0.5rem;
   }
 
   .header__socials > a {
@@ -212,14 +214,6 @@ header {
 
   .me {
     width: 100%;
-  }
-
-  .me__image:hover .me > img {
-    opacity: 0.1;
-  }
-
-  .me__image:hover .my__about {
-    opacity: 1;
   }
 
   .RSbtn {

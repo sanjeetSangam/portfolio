@@ -37,6 +37,17 @@ const Navbar = () => {
           </a>
 
           <a
+            href="#about"
+            onClick={() => {
+              setActiveNav("#about");
+            }}
+            className={activeNav === "#about" ? "active" : ""}
+          >
+            {/* <AiFillHome /> */}
+            About
+          </a>
+
+          <a
             href="#skills"
             onClick={() => {
               setActiveNav("#skills");
@@ -86,6 +97,18 @@ const Navbar = () => {
             >
               {/* <AiFillHome /> */}
               Home
+            </a>
+
+            <a
+              href="#about"
+              onClick={() => {
+                setActiveNav("#about");
+                setToggle(false);
+              }}
+              className={activeNav === "#about" ? "active" : ""}
+            >
+              {/* <AiFillHome /> */}
+              About
             </a>
 
             <a

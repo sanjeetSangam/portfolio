@@ -3,7 +3,7 @@ nav {
   /* background: rgb(188, 213, 228); */
   width: 100%;
   display: block;
-  padding: 0.7rem 1.7rem;
+  padding: 0.1rem 1.7rem;
   z-index: 1000;
   position: sticky;
   top: 0;
@@ -58,6 +58,7 @@ nav {
 }
 
 .small__screen {
+  padding: 0.5rem;
   z-index: 1500;
   display: none;
 }
