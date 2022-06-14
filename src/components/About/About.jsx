@@ -1,13 +1,13 @@
 import React from "react";
 import "./about.css";
 import sanjeet from "../../assets/sangam.png";
-import bg from "../../assets/profileBG.svg";
+// import bg from "../../assets/profileBG.svg";
 
 const About = () => {
   return (
     <div id="about" className="container about__container">
       <div className="me__profile">
-        <img src={bg} alt="" className="profileBG" />
+        {/* <img src={bg} alt="" className="profileBG" /> */}
         <img src={sanjeet} alt="" />
       </div>
 

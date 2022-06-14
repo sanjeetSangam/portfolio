@@ -78,7 +78,7 @@ const data = [
     image: whatsapp,
     title: "Whatsapp",
     github: "https://github.com/sanjeetSangam/whatsapp",
-    demo: "https://chat-wht.netlify.app/",
+    demo: "https://chats-open.netlify.app/",
     projectType: "Group Project",
     des: "Whatsapp is social media plateform where people through contacts or phone number come to meet and chat, share things and so on.",
     techStach: [html, css, js, vscode, git, github, react],
