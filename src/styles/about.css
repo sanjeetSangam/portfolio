@@ -15,12 +15,9 @@
     to bottom,
     #094094,
     #616aae,
-    #a61cc9,
-    #050408,
-    #030202
+    #010d1f
   );
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .profile__image {

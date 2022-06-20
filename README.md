@@ -1,17 +1,13 @@
 # portfolio
+
 This is my portfolio which is made with reactjs.
 
 <!-- #HOME -->
 
-<img src="https://pbs.twimg.com/media/FUe2EdOVUAEs7ZN?format=jpg&name=large"></img>
+<img src="https://pbs.twimg.com/media/FVq0EI9VUAAia21?format=jpg&name=large"></img>
+
 <!-- 
-#Projects
 
-<img src="https://pbs.twimg.com/media/FOm2NwaacAETfsU?format=jpg&name=large"></img>
-
-#Contact
-
-<img src="https://pbs.twimg.com/media/FOm2NwdaMAEvdBx?format=jpg&name=large"></img> -->
 
 
 # Authors
@@ -36,4 +32,3 @@ JavaScript <br/>
 # Tools
 VS Code
 Github
-

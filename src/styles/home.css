@@ -3,7 +3,14 @@
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 2.16rem);
-  background: url("../assets/mesh.png");
+  background-image: linear-gradient(
+    to bottom,
+    #02122a,
+    #031d3a,
+    #0c4784,
+    #1065b6,
+    #1284eb
+  );
 
   background-repeat: no-repeat;
   background-size: cover;
