@@ -1,0 +1,42 @@
+nav {
+  padding: 0.8rem 10rem;
+  top: 0;
+  position: sticky;
+  justify-content: space-between;
+  background: rgb(2, 33, 75);
+  z-index: 500;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand h3 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.menus {
+  display: flex;
+}
+
+.menu__item .active {
+  background-color: black;
+}
+
+@media screen and (max-width: 850px) {
+  .brand {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}

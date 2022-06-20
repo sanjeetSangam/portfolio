@@ -1,0 +1,91 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 2.16rem);
+  background: url("../assets/mesh.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  gap: 2rem;
+}
+
+.home h3 {
+  color: red;
+}
+
+.home__content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  z-index: 2;
+  text-align: center;
+}
+
+.home__img {
+  position: relative;
+  z-index: 2;
+}
+
+.home__img img {
+  width: 100%;
+}
+
+.bgHome {
+  position: absolute;
+  z-index: -1;
+}
+
+.home__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socials__buttons a {
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolue {
+  position: absolute;
+  z-index: 1;
+  height: 100;
+  width: 100%;
+  background: rgba(1, 19, 31, 0.87);
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+  overflow: hidden;
+}
+
+.absolue img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1086px) {
+  .home {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

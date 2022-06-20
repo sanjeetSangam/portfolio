@@ -1,0 +1,93 @@
+.projects {
+  min-height: 50vh;
+}
+
+.crsl {
+  margin-top: 2rem;
+}
+
+.projects__item {
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  z-index: 1;
+}
+
+.projects__item h5 {
+  margin-bottom: 0.5rem;
+}
+
+.projects__item-image {
+  border-radius: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.projects__item-image > img {
+  width: 100%;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  background: rgba(1, 10, 27, 0.767);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.projects__item-image h5 {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  z-index: 100;
+  transform: translate(-5%, -50%);
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.projects__item-image:hover .back {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.projects__item-image:hover h5 {
+  opacity: 1;
+  top: 50%;
+}
+
+.tech_stacks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.tech_stacks > div {
+  height: 1.7rem;
+}
+
+.tech_stacks img {
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.projects__item h3 {
+  margin: 0.8rem 0 0.5rem;
+}
+
+.projects__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .projects__item-cta {
+    flex-direction: column;
+  }
+}

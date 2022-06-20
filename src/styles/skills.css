@@ -1,0 +1,41 @@
+.skills__box {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+.techStacks > h3 {
+  text-align: center;
+}
+
+.techStacks > h3 {
+  color: black;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tech p {
+  color: rgb(68, 3, 57);
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 700px) {
+  .skills__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+    margin-top: 2rem;
+  }
+}
