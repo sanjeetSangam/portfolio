@@ -6,7 +6,6 @@ This is my portfolio which is made with reactjs.
 
 <img src="https://pbs.twimg.com/media/FVq0EI9VUAAia21?format=jpg&name=large"></img>
 
-<!-- 
 
 
 
