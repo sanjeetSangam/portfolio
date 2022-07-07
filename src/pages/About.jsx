@@ -23,9 +23,6 @@ export const About = () => {
             challenges in the upcoming days.
             <br />
             <br />
-            <span style={{ color: "yellow" }}>
-              Focused : More on practicals
-            </span>
           </h4>
         </div>
       </div>
