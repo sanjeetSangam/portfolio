@@ -17,14 +17,14 @@ import { SiExpress, SiSocketdotio, SiFirebase } from "react-icons/si";
 export const Skills = () => {
   return (
     <section id="skills" className="skills">
-      <div className="heading">
+      <div className="heading" data-aos="fade-up">
         <Heading>
           <h2>Skills</h2>
         </Heading>
       </div>
 
       <div className="skills__box">
-        <Skill className="techStacks">
+        <Skill className="techStacks" data-aos="fade-up">
           <h3>Front End</h3>
           <div className="skills__list">
             <div className="tech">
@@ -57,7 +57,7 @@ export const Skills = () => {
           </div>
         </Skill>
 
-        <Skill className="techStacks">
+        <Skill className="techStacks" data-aos="fade-up">
           <h3>Back End</h3>
           <div className="skills__list">
             <div className="tech">

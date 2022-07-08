@@ -34,7 +34,7 @@ export const Contact = () => {
 
   return (
     <section id="contacts" className="contacts">
-      <div className="heading">
+      <div className="heading" data-aos="fade-up">
         <Heading>
           <h2>Contacts</h2>
         </Heading>
@@ -42,7 +42,7 @@ export const Contact = () => {
 
       <div className="contact__container">
         <div className="contact__options">
-          <article className="contact__option">
+          <article className="contact__option" data-aos="fade-up">
             <MdEmail className="contact__option-icon" />
             <h4>Email</h4>
             <h5 id="mail">asanjeetsangam15@gmail.com</h5>
@@ -56,7 +56,7 @@ export const Contact = () => {
             </a>
           </article>
 
-          <article className="contact__option">
+          <article className="contact__option" data-aos="fade-up">
             <RiInstagramFill className="contact__option-icon " />
             <h4>Instagram</h4>
             <h5>sanjeet</h5>
@@ -79,6 +79,7 @@ export const Contact = () => {
             name="name"
             placeholder="Your Full Name"
             required
+            data-aos="fade-up"
           />
 
           <input
@@ -86,6 +87,7 @@ export const Contact = () => {
             name="email"
             placeholder="Enter you email"
             required
+            data-aos="fade-up"
           />
 
           <textarea
@@ -94,6 +96,7 @@ export const Contact = () => {
             rows="7"
             placeholder="Your Message"
             required
+            data-aos="fade-up"
           ></textarea>
 
           <button type="submit" className="btn btn-primary">

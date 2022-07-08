@@ -17,11 +17,12 @@ import { Socials } from "../styled-components/Socials";
 
 export const Home = () => {
   const [contact] = useState(true);
+
   return (
-    <section id="home" className="home">
+    <section id="home" className="home" data-aos="zoom">
       <div className="home__content">
-        <h3>Hello I am</h3>
-        <h1>Sanjeet Kumar Sangam</h1>
+        <h3 data-aos="fade-down">Hello I am</h3>
+        <h1 data-aos="fade-down">Sanjeet Kumar Sangam</h1>
         <h2>Full Stack Developer</h2>
 
         <div className="home__buttons">
@@ -29,6 +30,7 @@ export const Home = () => {
             href="https://drive.google.com/file/d/1x9k4Xlm5WzUTcQpT95nS786HGFC_Z32q/view"
             target="_blank"
             rel="noreferrer"
+            data-aos="fade-right"
           >
             <HomeButton>
               <span>Resume</span>
@@ -36,7 +38,7 @@ export const Home = () => {
             </HomeButton>
           </a>
 
-          <HomeButton contact={contact}>
+          <HomeButton data-aos="fade-left" contact={contact}>
             <span>
               <Link to="contacts" offset={-100}>
                 Contact Me
@@ -51,6 +53,7 @@ export const Home = () => {
             href="https://www.linkedin.com/in/sanjeet-kumar-sangam-09097421a/"
             target="_blank"
             rel="noreferrer"
+            data-aos="flip-up"
           >
             <Socials icon="linkedin">
               <AiFillLinkedin />
@@ -61,6 +64,7 @@ export const Home = () => {
             href="https://github.com/sanjeetSangam"
             rel="noreferrer"
             target="_blank"
+            data-aos="flip-up"
           >
             <Socials icon="github">
               <AiFillGithub />
@@ -71,6 +75,7 @@ export const Home = () => {
             href="https://www.youtube.com/channel/UCECZYmMMN-GpoGkSevc_NTg"
             target="_blank"
             rel="noreferrer"
+            data-aos="flip-up"
           >
             <Socials icon="youtube">
               <AiFillYoutube />
@@ -80,6 +85,7 @@ export const Home = () => {
             href="https://www.instagram.com/san_arts_official_/"
             target="_blank"
             rel="noreferrer"
+            data-aos="flip-up"
           >
             <Socials icon="insta">
               <AiFillInstagram />
@@ -89,8 +95,9 @@ export const Home = () => {
       </div>
 
       <div className="home__img">
-      <img src={blob} alt="" className="bgHome" />
-        <img src={homeIMG} alt="home" />
+        <img data-aos="flip-up" src={blob} alt="" className="bgHome" />
+        <img data-aos="flip-up" src={homeIMG} alt="home" />
+        {/* <Coder /> */}
       </div>
 
       <div className="absolue"></div>

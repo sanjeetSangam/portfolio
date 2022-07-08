@@ -5,6 +5,9 @@ nav {
   justify-content: space-between;
   background: rgb(2, 33, 75);
   z-index: 500;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .brand {
@@ -18,25 +21,57 @@ nav {
   font-size: 2rem;
 }
 
-nav {
-  display: flex;
-  gap: 1rem;
+.bigScreenNav {
+  padding: 0.5rem;
 }
 
 .menus {
   display: flex;
 }
 
-.menu__item .active {
+.menu__item.active {
   background-color: black;
 }
 
+.smallScreenNav {
+  display: none;
+}
+
+.smallScreenNav button {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.menus__small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100%;
+  background: black;
+  display: grid;
+  place-items: center;
+}
+
+.small {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 @media screen and (max-width: 850px) {
-  .brand {
+  nav {
+    padding: 0.8rem 3rem;
+  }
+
+  .bigScreenNav {
     display: none;
   }
 
-  nav {
-    justify-content: center;
+  .smallScreenNav {
+    display: block;
   }
 }

@@ -14,7 +14,7 @@ export const Projects = () => {
   ];
   return (
     <section id="projects" className="projects">
-      <div className="heading">
+      <div className="heading" data-aos="fade-up">
         <Heading>
           <h2>Projects ({data.length}) </h2>
         </Heading>
@@ -41,11 +41,11 @@ export const Projects = () => {
                       <div className="back"></div>
                       <h5 className="desc">{des}</h5>
                     </div>
-                    <h3>{title}</h3>
+                    <h3 data-aos="fade-up">{title}</h3>
 
-                    <h5>{projectType}</h5>
+                    <h5 data-aos="fade-up">{projectType}</h5>
 
-                    <div className="tech_stacks">
+                    <div data-aos="fade-up" className="tech_stacks">
                       {techStach.map((e) => {
                         return (
                           <div>
@@ -55,7 +55,7 @@ export const Projects = () => {
                       })}
                     </div>
 
-                    <div className="projects__item-cta">
+                    <div className="projects__item-cta" data-aos="fade-up">
                       <a
                         href={github}
                         className="btn"

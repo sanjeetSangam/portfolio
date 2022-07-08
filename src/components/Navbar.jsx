@@ -1,53 +1,129 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Menu } from "../styled-components/Menu";
 import "../styles/navbar.css";
 import { Loader } from "./Loader";
 
+import { RiMenuFoldFill, RiCloseLine } from "react-icons/ri";
+
 export const Navbar = ({ home }) => {
-  // const [click, setClick] = useState(false);
-  // const handleClick = () => setClick(!click);
-  // const closeMenu = () => setClick(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <nav>
-      <div className="brand">
-        <Loader />
-        <h3>Sanjeet</h3>
+      <Link to="home" offset={-100}>
+        <div className="brand">
+          <Loader />
+          <h3>Sanjeet</h3>
+        </div>
+      </Link>
+
+      <div className="bigScreenNav">
+        <ul className={"menus"}>
+          <li className="menu__item">
+            <Link to="home" offset={-100}>
+              <Menu>Home</Menu>
+            </Link>
+          </li>
+
+          <li className="menu__item">
+            <Link to="about" offset={-100}>
+              <Menu>About</Menu>
+            </Link>
+          </li>
+
+          <li className="menu__item">
+            <Link to="skills" offset={-100}>
+              <Menu>Skills</Menu>
+            </Link>
+          </li>
+
+          <li className="menu__item">
+            <Link to="projects" offset={-100}>
+              <Menu>Projects</Menu>
+            </Link>
+          </li>
+
+          <li className="menu__item">
+            {" "}
+            <Link to="contacts" offset={-100}>
+              <Menu>Contacts</Menu>
+            </Link>
+          </li>
+        </ul>
       </div>
 
-      <ul className={"menus"}>
-        <li className="menu__item">
-          <Link to="home" offset={-100}>
-            <Menu>Home</Menu>
-          </Link>
-        </li>
+      <div className="smallScreenNav">
+        <button onClick={() => setOpenMenu(true)}>
+          <RiMenuFoldFill />
+        </button>
 
-        <li className="menu__item">
-          <Link to="about" offset={-100}>
-            <Menu>About</Menu>
-          </Link>
-        </li>
+        {openMenu && (
+          <div className="menus__small">
+            <ul className="small">
+              <button onClick={() => setOpenMenu(false)}>
+                <RiCloseLine />
+              </button>
 
-        <li className="menu__item">
-          <Link to="skills" offset={-100}>
-            <Menu>Skills</Menu>
-          </Link>
-        </li>
+              <li className="menu__item">
+                <Link
+                  data-aos="fade-up"
+                  onClick={() => setOpenMenu(false)}
+                  to="home"
+                  offset={-100}
+                >
+                  <Menu>Home</Menu>
+                </Link>
+              </li>
 
-        <li className="menu__item">
-          <Link to="projects" offset={-100}>
-            <Menu>Projects</Menu>
-          </Link>
-        </li>
+              <li className="menu__item">
+                <Link
+                  data-aos="fade-up"
+                  onClick={() => setOpenMenu(false)}
+                  to="about"
+                  offset={-100}
+                >
+                  <Menu>About</Menu>
+                </Link>
+              </li>
 
-        <li className="menu__item">
-          {" "}
-          <Link to="contacts" offset={-100}>
-            <Menu>Contacts</Menu>
-          </Link>
-        </li>
-      </ul>
+              <li className="menu__item">
+                <Link
+                  data-aos="fade-up"
+                  onClick={() => setOpenMenu(false)}
+                  to="skills"
+                  offset={-100}
+                >
+                  <Menu>Skills</Menu>
+                </Link>
+              </li>
+
+              <li className="menu__item">
+                <Link
+                  data-aos="fade-up"
+                  onClick={() => setOpenMenu(false)}
+                  to="projects"
+                  offset={-100}
+                >
+                  <Menu>Projects</Menu>
+                </Link>
+              </li>
+
+              <li className="menu__item">
+                {" "}
+                <Link
+                  data-aos="fade-up"
+                  onClick={() => setOpenMenu(false)}
+                  to="contacts"
+                  offset={-100}
+                >
+                  <Menu>Contacts</Menu>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
