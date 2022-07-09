@@ -27,7 +27,14 @@ export const Home = () => {
         <h2>
           <span style={{ color: "#814309" }}>
             <Typical
-              steps={["Full Stack Developer 👨‍💻", 1000, "Artist 🎨 ", 1000]}
+              steps={[
+                "Full Stack Developer 👨‍💻",
+                1000,
+                "Artist 🎨",
+                1000,
+                "YouTuber 	📽️",
+                1000,
+              ]}
               loop={Infinity}
               wrapper="p"
             />
@@ -105,7 +112,7 @@ export const Home = () => {
 
       <div className="home__img">
         {/* <img data-aos="flip-up" src={blob} alt="" className="bgHome" /> */}
-        <img data-aos="flip-up" src={homeIMG} alt="home" />
+        <img data-aos="fade-up" src={homeIMG} alt="home" />
       </div>
 
       <div className="absolue"></div>

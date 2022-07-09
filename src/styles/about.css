@@ -26,7 +26,7 @@
   max-height: 300px;
   padding-top: 2rem;
   padding-bottom: 0;
-  background: rgb(1, 7, 5);
+  background: linear-gradient(#224a51, #000821);
   overflow-y: hidden;
   border-radius: 50%;
 }
