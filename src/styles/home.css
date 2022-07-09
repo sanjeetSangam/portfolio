@@ -19,7 +19,7 @@
 }
 
 .home h3 {
-  color: red;
+  color: rgb(20, 145, 16);
 }
 
 .home__content {
@@ -94,5 +94,15 @@
   .home__buttons {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .home__content h1{
+    font-size: 1.8rem;
+  }
+
+  .home__content h2{
+    font-size: 1.2rem;
   }
 }

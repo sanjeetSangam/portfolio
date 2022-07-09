@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { HomeButton } from "../styled-components/HomeButton";
 import "../styles/home.css";
-import blob from "../assets/blob.svg";
+import Typical from "react-typical";
+// import blob from "../assets/blob.svg";
 
 import homeIMG from "../assets/book.png";
 
@@ -21,9 +22,17 @@ export const Home = () => {
   return (
     <section id="home" className="home" data-aos="zoom">
       <div className="home__content">
-        <h3 data-aos="fade-down">Hello I am</h3>
+        <h3 data-aos="fade-down">Hello, I am </h3>
         <h1 data-aos="fade-down">Sanjeet Kumar Sangam</h1>
-        <h2>Full Stack Developer</h2>
+        <h2>
+          <span style={{ color: "#814309" }}>
+            <Typical
+              steps={["Full Stack Developer 👨‍💻", 1000, "Artist 🎨 ", 1000]}
+              loop={Infinity}
+              wrapper="p"
+            />
+          </span>
+        </h2>
 
         <div className="home__buttons">
           <a
@@ -95,9 +104,8 @@ export const Home = () => {
       </div>
 
       <div className="home__img">
-        <img data-aos="flip-up" src={blob} alt="" className="bgHome" />
+        {/* <img data-aos="flip-up" src={blob} alt="" className="bgHome" /> */}
         <img data-aos="flip-up" src={homeIMG} alt="home" />
-        {/* <Coder /> */}
       </div>
 
       <div className="absolue"></div>

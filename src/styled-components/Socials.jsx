@@ -43,4 +43,9 @@ export const Socials = styled.button`
       transform: translateY(-5px);
     }
   }
+
+
+@media screen and (max-width: 400px) {
+  font-size: 1.2rem;
+}
 `;
