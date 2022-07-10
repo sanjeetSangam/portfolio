@@ -4,6 +4,7 @@ import vrbo from "./../assets/vrbo.png";
 import facebook from "./../assets/facebook.png";
 import whatsapp from "./../assets/whatsapp.png";
 import saashi from "./../assets/saashi1.png";
+import weather from "./../assets/weather.png";
 
 import html from "./../assets/icons/html.png";
 import css from "./../assets/icons/css.jpg";
@@ -58,7 +59,6 @@ export const data = [
     des: "Facebook is social media plateform where people from all over the world came and meet, share things and so on.",
     techStach: [html, css, js, vscode, git, github, react, firebase],
   },
-
   {
     id: 5,
     image: "https://pbs.twimg.com/media/FUspndVUUAAibt5?format=jpg&name=large",
@@ -71,6 +71,16 @@ export const data = [
   },
   {
     id: 6,
+    image: weather,
+    title: "Weather App",
+    github: "https://github.com/sanjeetSangam/weather",
+    demo: "https://weather-sanjeet.netlify.app/",
+    projectType: "Solo Project",
+    des: "Find Weather of your favorite city or your own also.",
+    techStach: [ vscode, git, github, react],
+  },
+  {
+    id: 7,
     image: whatsapp,
     title: "Whatsapp",
     github: "https://github.com/sanjeetSangam/whatsapp",
@@ -80,7 +90,7 @@ export const data = [
     techStach: [html, css, js, vscode, git, github, react],
   },
   {
-    id: 7,
+    id: 8,
     image: h_m,
     title: "H & M",
     github: "https://github.com/AkshayThakur1995/H-and-M-Project",
