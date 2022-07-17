@@ -20,7 +20,7 @@ export const About = () => {
 
         <div className="profile__info">
           <h4 data-aos="fade-down">
-            I love to do programming and also love to make exciting web apps. I
+            I love to make exciting web apps. <br /> I
             had completed my B.tech with the stream of Manufacturing Engineering
             from CIPET college in Ahmedabad. <br />
             But having a decent interest in computer science brings me to the

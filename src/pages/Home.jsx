@@ -3,7 +3,6 @@ import { Link } from "react-scroll";
 import { HomeButton } from "../styled-components/HomeButton";
 import "../styles/home.css";
 import Typical from "react-typical";
-// import blob from "../assets/blob.svg";
 
 import homeIMG from "../assets/book.png";
 
@@ -101,21 +100,19 @@ export const Home = () => {
             href="https://www.instagram.com/san_arts_official_/"
             target="_blank"
             rel="noreferrer"
-            data-aos="flip-up"
+            data-aos="flip-up"  
           >
             <Socials icon="insta">
               <AiFillInstagram />
             </Socials>
           </a>
         </div>
-      </div>
+      </div>  
 
       <div className="home__img">
-        {/* <img data-aos="flip-up" src={blob} alt="" className="bgHome" /> */}
         <img data-aos="fade-up" src={homeIMG} alt="home" />
       </div>
 
-      <div className="absolue"></div>
     </section>
   );
 };

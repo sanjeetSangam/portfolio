@@ -5,7 +5,7 @@
   --color-primary: #219ebc;
   --color-secondary: #8ecae6;
   --text-color: #ffffff;
-  --highlight: #ffb703;
+  --highlight: #030f36;
   --white: #ffffff;
   --menu-color: #023047;
 
@@ -52,10 +52,16 @@ a {
 body {
   min-height: 100vh;
   overflow-y: scroll;
-  background: url("./assets/mesh1.png");
+  /* background: url("./assets/mesh1.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--text-color);
+  background: rgb(244, 176, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 176, 205, 1) 29%,
+    rgba(82, 134, 195, 1) 100%
+  );
 }
 
 ::-webkit-scrollbar {

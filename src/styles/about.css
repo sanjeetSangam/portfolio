@@ -8,7 +8,7 @@
   /* width: 950px; */
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2.8rem;
   margin: auto;
   margin-top: 1rem;
   padding: 1rem 5rem;
@@ -26,7 +26,12 @@
   max-height: 300px;
   padding-top: 2rem;
   padding-bottom: 0;
-  background: linear-gradient(#224a51, #000821);
+  background: rgb(230, 166, 193);
+  background: radial-gradient(
+    circle,
+    rgba(230, 166, 193, 1) 29%,
+    rgb(156, 52, 66) 100%
+  );
   overflow-y: hidden;
   border-radius: 50%;
   border: 5px solid rgb(255, 255, 255);

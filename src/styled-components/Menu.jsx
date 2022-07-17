@@ -7,14 +7,14 @@ export const Menu = styled.button`
   position: relative;
   z-index: 1;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
   outline: none;
   background: transparent;
   height: 100%;
   color: var(--highlight);
 
   :hover {
-    color: black;
+    color: #ffffff;
   }
 
   :after {

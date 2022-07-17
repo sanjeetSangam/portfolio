@@ -3,11 +3,17 @@ nav {
   top: 0;
   position: sticky;
   justify-content: space-between;
-  background: rgb(2, 33, 75);
+  /* background: rgb(3, 41, 97); */
   z-index: 500;
   display: flex;
   gap: 1rem;
   align-items: center;
+  background: rgb(244, 176, 205);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 176, 205, 1) 29%,
+    rgba(82, 134, 195, 1) 100%
+  );
 }
 
 .brand {

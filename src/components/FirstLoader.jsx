@@ -10,9 +10,6 @@ export const FirstLoader = () => {
         <span></span>
         <span></span>
       </div>
-      <p style={{ color: "#88aa00" }} className="load_text">
-        Loading...
-      </p>{" "}
     </>
   );
 };
