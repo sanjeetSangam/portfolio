@@ -8,7 +8,6 @@
   --highlight: #030f36;
   --white: #ffffff;
   --menu-color: #023047;
-
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
@@ -52,7 +51,6 @@ a {
 body {
   min-height: 100vh;
   overflow-y: scroll;
-  /* background: url("./assets/mesh1.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--text-color);
