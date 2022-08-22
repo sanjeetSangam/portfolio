@@ -87,7 +87,7 @@ export const Home = () => {
           </a>
 
           <a
-            href="https://www.youtube.com/channel/UCECZYmMMN-GpoGkSevc_NTg"
+            href="https://www.youtube.com/channel/UCcqNqRLGolqqWUCFybH8adw"
             target="_blank"
             rel="noreferrer"
             data-aos="flip-up"
