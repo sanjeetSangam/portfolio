@@ -20,13 +20,14 @@ export const About = () => {
 
         <div className="profile__info">
           <h4 data-aos="fade-down">
-            I love to make exciting web apps. <br /> I
+          Experienced full stack developer with two years of professional practice in developing and deploying web applications. <br /> Proficient in multiple programming languages and frameworks, specializing in crafting intuitive and adaptable user interfaces. <br /> Collaborative team player known for strong communication and teamwork abilities.
+            {/* I love to make exciting web apps. <br /> I
             had completed my B.tech with the stream of Manufacturing Engineering
             from CIPET college in Ahmedabad. <br />
             But having a decent interest in computer science brings me to the
             Web development field and now, I have learnt MERN stack. I wish to
             work in a technological environment and also I will love to face new
-            challenges in the upcoming days.
+            challenges in the upcoming days. */}
             <br />
             <br />
           </h4>

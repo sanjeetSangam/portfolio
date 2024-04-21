@@ -8,102 +8,101 @@ import emailjs from "emailjs-com";
 import { Heading } from "../styled-components/Heading";
 
 export const Contact = () => {
-  const form = useRef();
+	const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+	const sendEmail = (e) => {
+		e.preventDefault();
+		emailjs
+			.sendForm(
+				process.env.REACT_APP_EMAILJS_SERVICE,
+				process.env.REACT_APP_EMAILJS_TEMPLATE,
+				form.current,
+				process.env.REACT_APP_EMAILJS_ID
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					e.target.reset();
+				},
+				(error) => {
+					console.log(error.text);
+					e.target.reset();
+				}
+			);
+	};
 
-    emailjs
-      .sendForm(
-        "service_1wqt28d",
-        "template_jp3y8sg",
-        form.current,
-        "kD1neYXt8Gbf9N8Fd"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+	return (
+		<section id="contacts" className="contacts">
+			<div className="heading" data-aos="fade-up">
+				<Heading>
+					<h2>Contacts</h2>
+				</Heading>
+			</div>
 
-    e.target.reset();
-  };
+			<div className="contact__container">
+				<div className="contact__options">
+					<article className="contact__option" data-aos="fade-up">
+						<MdEmail className="contact__option-icon" />
+						<h4>Email</h4>
+						<h5 id="mail">asanjeetsangam15@gmail.com</h5>
+						<a
+							className="mail"
+							href="mailto:asanjeetsangam15@gmail.com"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Send a message
+						</a>
+					</article>
 
-  return (
-    <section id="contacts" className="contacts">
-      <div className="heading" data-aos="fade-up">
-        <Heading>
-          <h2>Contacts</h2>
-        </Heading>
-      </div>
+					<article className="contact__option" data-aos="fade-up">
+						<RiInstagramFill className="contact__option-icon " />
+						<h4>Instagram</h4>
+						<h5>sanjeet</h5>
+						<a
+							href="https://www.instagram.com/san_arts_official_/"
+							target="_blank"
+							rel="noreferrer"
+							className="instagram"
+						>
+							Visit Instagram
+						</a>
+					</article>
+				</div>
 
-      <div className="contact__container">
-        <div className="contact__options">
-          <article className="contact__option" data-aos="fade-up">
-            <MdEmail className="contact__option-icon" />
-            <h4>Email</h4>
-            <h5 id="mail">asanjeetsangam15@gmail.com</h5>
-            <a
-              className="mail"
-              href="mailto:asanjeetsangam15@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Send a message
-            </a>
-          </article>
+				{/* end of contact options */}
 
-          <article className="contact__option" data-aos="fade-up">
-            <RiInstagramFill className="contact__option-icon " />
-            <h4>Instagram</h4>
-            <h5>sanjeet</h5>
-            <a
-              href="https://www.instagram.com/san_arts_official_/"
-              target="_blank"
-              rel="noreferrer"
-              className="instagram"
-            >
-              Visit Instagram
-            </a>
-          </article>
-        </div>
+				<form ref={form} onSubmit={sendEmail}>
+					<input
+						type="text"
+						name="name"
+						placeholder="Your Full Name"
+						required
+						data-aos="fade-up"
+					/>
 
-        {/* end of contact options */}
+					<input
+						type="email"
+						name="email"
+						placeholder="Enter you email"
+						required
+						data-aos="fade-up"
+					/>
 
-        <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            required
-            data-aos="fade-up"
-          />
+					<textarea
+						name="message"
+						id=""
+						rows="7"
+						placeholder="Your Message"
+						required
+						data-aos="fade-up"
+					></textarea>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter you email"
-            required
-            data-aos="fade-up"
-          />
-
-          <textarea
-            name="message"
-            id=""
-            rows="7"
-            placeholder="Your Message"
-            required
-            data-aos="fade-up"
-          ></textarea>
-
-          <button type="submit" className="btn btn-primary">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </section>
-  );
+					<button type="submit" className="btn btn-primary">
+						Send Message
+					</button>
+				</form>
+			</div>
+		</section>
+	);
 };

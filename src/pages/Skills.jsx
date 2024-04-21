@@ -8,6 +8,7 @@ import { DiReact, DiCss3, DiHtml5 } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaGitAlt } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
+import { SiRedux } from "react-icons/si";
 
 // back
 import { FaNodeJs } from "react-icons/fa";
@@ -31,6 +32,10 @@ export const Skills = () => {
               <p>
                 {" "}
                 <DiReact /> ReactJs
+              </p>
+              <p>
+                {" "}
+                <SiRedux /> Redux
               </p>
               <p>
                 {" "}

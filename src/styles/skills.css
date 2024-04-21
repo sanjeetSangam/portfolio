@@ -19,6 +19,7 @@
 .tech {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -29,6 +30,9 @@
   width: max-content;
   gap: 1rem;
   font-size: 1.3rem;
+  border: 1px solid #373852;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 700px) {

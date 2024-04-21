@@ -1,142 +1,140 @@
 .contact__container {
-  width: 70%;
-  display: grid;
-  grid-template-columns: 30% 58%;
-  gap: 12%;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+	width: 70%;
+	display: grid;
+	grid-template-columns: 30% 58%;
+	gap: 12%;
+	margin: auto;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 
 .contact__options {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
 }
 
 .contact__option {
-  background: rgb(11, 75, 134);
-  padding: 1.2rem;
-  border-radius: 1.2rem;
-  text-align: center;
-  width: max-content;
-  min-width: 100%;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  box-shadow: rgb(14, 13, 13) 10px 10px 10px -10px;
+	background: rgb(11, 75, 134);
+	padding: 1.2rem;
+	border-radius: 1.2rem;
+	text-align: center;
+	width: max-content;
+	min-width: 100%;
+	border: 1px solid transparent;
+	transition: 0.5s;
+	box-shadow: rgb(14, 13, 13) 10px 10px 10px -10px;
 }
 
 .contact__option:hover {
-  background: transparent;
-  transform: scale(1.1);
+	background: #063051;
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 .contact__option-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .contact__option a {
-  margin-top: 0.7rem;
-  display: inline-block;
-  font-size: 0.8rem;
+	margin-top: 0.7rem;
+	display: inline-block;
+	font-size: 0.8rem;
 }
 
-.mail {
-  color: #24021c;
-}
-
+.mail,
 .instagram {
-  color: black;
+	color: white;
 }
 
 /* ============= form ============= */
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  background: transparent;
-  border: 2px solid rgb(2, 45, 73);
-  resize: none;
-  color: black;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	background: transparent;
+	border: 2px solid rgb(2, 45, 73);
+	resize: none;
+	color: black;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgb(4, 77, 99);
+	color: rgb(4, 77, 99);
 }
 
 form button {
-  --color: #0a125f;
-  font-family: inherit;
-  display: inline-block;
-  width: 8em;
-  height: 2.6em;
-  line-height: 2.5em;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid var(--color);
-  transition: color 0.5s;
-  z-index: 1;
-  font-size: 17px;
-  border-radius: 6px;
-  font-weight: 500;
-  color: var(--color);
-  cursor: pointer;
-  background: transparent;
+	--color: #0a125f;
+	font-family: inherit;
+	display: inline-block;
+	width: 8em;
+	height: 2.6em;
+	line-height: 2.5em;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid var(--color);
+	transition: color 0.5s;
+	z-index: 1;
+	font-size: 17px;
+	border-radius: 6px;
+	font-weight: 500;
+	color: var(--color);
+	cursor: pointer;
+	background: transparent;
 }
 
 form button:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 150px;
-  width: 200px;
-  border-radius: 50%;
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background: var(--color);
+	height: 150px;
+	width: 200px;
+	border-radius: 50%;
 }
 
 form button:hover {
-  color: #fff;
+	color: #fff;
 }
 
 form button:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
+	top: 100%;
+	left: 100%;
+	transition: all 0.7s;
 }
 
 form button:hover:before {
-  top: -30px;
-  left: -30px;
+	top: -30px;
+	left: -30px;
 }
 
 form button:active:before {
-  background: #3a0ca3;
-  transition: background 0s;
+	background: #3a0ca3;
+	transition: background 0s;
 }
 
 /* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
 
 @media screen and (max-width: 1024px) {
-  .contact__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+	.contact__container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
 }
 
 /* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
 
 @media screen and (max-width: 600px) {
-  .contact__container {
-    width: var(--container-width-sm);
-  }
+	.contact__container {
+		width: var(--container-width-sm);
+	}
 }

@@ -1,93 +1,195 @@
 .projects {
-  min-height: 50vh;
+	min-height: 50vh;
 }
 
-.crsl {
-  margin-top: 2rem;
+.app__work-filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 4rem 0 2rem;
 }
 
-.projects__item {
-  padding: 1.2rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
-  z-index: 1;
+.app__work-filter-item {
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	background-color: #fff;
+	color: #000;
+	font-weight: 800;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin: 0.5rem;
 }
 
-.projects__item h5 {
-  margin-bottom: 0.5rem;
+.app__work-filter-item:hover {
+	background-color: var(--secondary-color);
+	color: #fff;
 }
 
-.projects__item-image {
-  border-radius: 1.5rem 0;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
+@media screen and (min-width: 2000px) {
+	.app__work-filter-item {
+		padding: 1rem 2rem;
+		border-radius: 0.85rem;
+	}
 }
 
-.projects__item-image > img {
-  width: 100%;
+.item-active {
+	background-color: var(--secondary-color);
+	color: #fff;
 }
 
-.back {
-  position: absolute;
-  top: 0;
-  background: rgba(1, 10, 27, 0.767);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: 0.2s;
+.app__work-portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* align-items: center; */
+	/* display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
 }
 
-.projects__item-image h5 {
-  position: absolute;
-  top: 40%;
-  left: 10%;
-  z-index: 100;
-  transform: translate(-5%, -50%);
-  color: rgb(255, 255, 255);
-  opacity: 0;
-  transition: 0.2s;
+.app__work-item {
+	width: 400px;
+	flex-direction: column;
+	margin: 2rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	background-color: #fff;
+	color: #000;
+	/* cursor: pointer; */
+	transition: all 0.3s ease;
 }
 
-.projects__item-image:hover .back {
-  opacity: 1;
-  cursor: pointer;
+.app__work-item:hover {
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
-.projects__item-image:hover h5 {
-  opacity: 1;
-  top: 50%;
+@media screen and (min-width: 2000px) {
+	.app__work-item {
+		width: 470px;
+		padding: 1.25rem;
+		border-radius: 0.75rem;
+	}
 }
 
-.tech_stacks {
-  display: flex;
-  align-items: center;
+@media screen and (max-width: 300px) {
+	.app__work-item {
+		width: 100%;
+		margin: 1rem;
+	}
+}
+
+.app__work-img {
+	width: 100%;
+	height: 230px;
+	position: relative;
+}
+
+.app__work-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.5rem;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 2000px) {
+	.app__work-img {
+		height: 350px;
+	}
+}
+
+.app__work-hover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 0.5rem;
+	opacity: 0;
+	transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.app__work-hover div {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	margin: 1rem;
+	font-family: var(--font-base);
+	font-weight: 800;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.app__work-hover div svg {
+	width: 50%;
+	height: 50%;
+	color: var(--white-color);
+}
+
+.app__work-img:hover .app__work-hover {
+	opacity: 1;
+	z-index: 1;
+}
+
+.app__work-content {
+	padding: 0.5rem;
+	width: 100%;
+	position: relative;
+	flex-direction: column;
+}
+
+.app__work-content h4 {
+	margin-top: 1rem;
+	line-height: 1.5;
+}
+
+@media screen and (min-width: 2000px) {
+	.app__work-content {
+		margin-top: 3rem;
+	}
+}
+
+.app__work-tag {
+	position: absolute;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	background-color: #fff;
+	top: -25px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 2;
+}
+
+.tech-stacks {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	gap: 10px;
+	margin-top: 1rem;
   flex-wrap: wrap;
-  gap: 0.7rem;
-  margin: 1rem 1rem 1rem 0;
 }
 
-.tech_stacks > div {
-  height: 1.7rem;
+.tech-stacks img {
+	width: 25px;
 }
 
-.tech_stacks img {
-  max-height: 100%;
-  cursor: pointer;
-}
-
-.projects__item h3 {
-  margin: 0.8rem 0 0.5rem;
-}
-
-.projects__item-cta {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (max-width: 700px) {
-  .projects__item-cta {
-    flex-direction: column;
-  }
+.project__links {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+	font-size: 2rem;
+	align-items: center;
+  justify-content: center;
 }

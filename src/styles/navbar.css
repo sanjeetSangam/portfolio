@@ -1,90 +1,90 @@
 nav {
-  padding: 0.8rem 10rem;
-  top: 0;
-  position: sticky;
-  justify-content: space-between;
-  /* background: rgb(3, 41, 97); */
-  z-index: 500;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  background: rgb(244, 176, 205);
-  background: linear-gradient(
-    90deg,
-    rgba(244, 176, 205, 1) 29%,
-    rgba(82, 134, 195, 1) 100%
-  );
+	padding: 0.8rem 10rem;
+	top: 0;
+	position: sticky;
+	justify-content: space-between;
+	z-index: 500;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	backdrop-filter: blur(10px);
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
 }
 
 .brand h3 {
-  font-weight: 600;
-  font-size: 2rem;
+	font-weight: 600;
+	font-size: 2rem;
+	color: #030f36;
 }
 
 .bigScreenNav {
-  padding: 0.5rem;
+	padding: 0.5rem;
 }
 
 .menus {
-  display: flex;
+	display: flex;
 }
 
 .menu__item.active {
-  background-color: black;
+	background-color: black;
 }
 
 .smallScreenNav {
-  display: none;
+	display: none;
 }
 
 .smallScreenNav button {
-  background: none;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 .menus__small {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  min-width: 100%;
-  background: black;
-  display: grid;
-  place-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-height: 100vh;
+	min-width: 100%;
+	background: #b5daf8;
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+
+.menus__small button{
+	color: #13141d !important;
 }
 
 .small {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 @media screen and (max-width: 850px) {
-  nav {
-    padding: 0.8rem 3rem;
-  }
+	nav {
+		padding: 0.8rem 3rem;
+	}
 
-  .bigScreenNav {
-    display: none;
-  }
+	.bigScreenNav {
+		display: none;
+	}
 
-  .smallScreenNav {
-    display: block;
-  }
+	.smallScreenNav {
+		display: block;
+	}
 
-  .brand h3 {
-    font-weight: 600;
-    font-size: 1.3rem;
-  }
+	.brand h3 {
+		font-weight: 600;
+		font-size: 1.3rem;
+	}
 }
