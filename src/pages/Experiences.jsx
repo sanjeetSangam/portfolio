@@ -23,66 +23,63 @@ const Experiences = () => {
 			</div>
 
 			<VerticalTimeline lineColor={"#2c2d42"}>
-				{experiences.map((experience) => (
-					<VerticalTimelineElement
-						contentStyle={{
-							background: "#1d1836",
-							color: "#fff",
-						}}
-						contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-						// date={experience.year}
-						iconStyle={{
-							background: "#b5daf8",
-							display: "grid",
-							placeItems: "center",
-							overflow: "hidden",
-						}}
-						icon={
-							<img
-								src={urlFor(experience.imgUrl)}
-								style={{
-									width: "80%",
-									objectFit: " contain",
-									mixBlendMode: "multiply",
-								}}
-								alt={urlFor(experience.imgUrl)}
-							/>
-						}
-                        key={experience._id}
-					>
-						<motion.div className="app__skills-exp-item" key={experience.year}>
-							<div className="app__skills-exp-year">
-								<p className="bold-text">{experience.year}</p>
-							</div>
-							<motion.div className="app__skills-exp-works">
-								{experience.works.map((work) => (
-									<div key={work.name}>
-										<motion.div
-											whileInView={{ opacity: [0, 1] }}
-											transition={{ duration: 0.5 }}
-											className="app__skills-exp-work"
-											data-tip
-											data-for={work.name}
-										>
-											<h4 className="bold-text">{work.name}</h4>
-											<p className="p-text">{work.company}</p>
-										</motion.div>
-										<div
-											id={work.name}
-											className="skills-tooltip"
-										>
-											{work.desc}
+				{experiences?.length > 0 &&
+					experiences.map((experience) => (
+						<VerticalTimelineElement
+							contentStyle={{
+								background: "#1d1836",
+								color: "#fff",
+							}}
+							contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+							// date={experience.year}
+							iconStyle={{
+								background: "#b5daf8",
+								display: "grid",
+								placeItems: "center",
+								overflow: "hidden",
+							}}
+							icon={
+								<img
+									src={urlFor(experience.imgUrl)}
+									style={{
+										width: "80%",
+										objectFit: " contain",
+										mixBlendMode: "multiply",
+									}}
+									alt={urlFor(experience.imgUrl)}
+								/>
+							}
+							key={experience._id}
+						>
+							<motion.div className="app__skills-exp-item" key={experience.year}>
+								<div className="app__skills-exp-year">
+									<p className="bold-text">{experience.year}</p>
+								</div>
+								<motion.div className="app__skills-exp-works">
+									{experience.works.map((work) => (
+										<div key={work.name}>
+											<motion.div
+												whileInView={{ opacity: [0, 1] }}
+												transition={{ duration: 0.5 }}
+												className="app__skills-exp-work"
+												data-tip
+												data-for={work.name}
+											>
+												<h4 className="bold-text">{work.name}</h4>
+												<p className="p-text">{work.company}</p>
+											</motion.div>
+											<div id={work.name} className="skills-tooltip">
+												{work.desc}
+											</div>
 										</div>
-									</div>
-								))}
+									))}
+								</motion.div>
 							</motion.div>
-						</motion.div>
-					</VerticalTimelineElement>
-				))}
+						</VerticalTimelineElement>
+					))}
 			</VerticalTimeline>
 		</section>
 	);
 };
 
 export default Experiences;
-
