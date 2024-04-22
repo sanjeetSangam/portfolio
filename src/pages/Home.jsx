@@ -120,7 +120,12 @@ export const Home = () => {
 			</div>
 
 			<div className="home__img">
-				<img data-aos="fade-up" src={homeIMG} alt="home" />
+				<motion.img
+					whileInView={{ scale: [0.8, 1] }}
+					transition={{ duration: 1, ease: "easeInOut" }}
+					src={homeIMG}
+					alt="home"
+				/>
 				<motion.img
 					whileInView={{ scale: [0, 1] }}
 					transition={{ duration: 1, ease: "easeInOut" }}
