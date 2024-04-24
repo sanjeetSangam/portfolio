@@ -90,7 +90,11 @@ export const Projects = () => {
 								</div>
 
 								<h4 className="bold-text">{work.title}</h4>
-								<p className="p-text" style={{ marginTop: 10 }}>
+								<p
+									className="p-text project_desc"
+									style={{ marginTop: 10 }}
+									title={work.description}
+								>
 									{work.description}
 								</p>
 
