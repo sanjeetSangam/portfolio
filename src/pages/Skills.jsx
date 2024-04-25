@@ -14,7 +14,7 @@ import { TbBrandVscode } from "react-icons/tb";
 // backend icons
 import { FaNodeJs } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
-import { SiExpress, SiSocketdotio, SiFirebase } from "react-icons/si";
+import { SiExpress, SiSocketdotio, SiFirebase, SiPostman } from "react-icons/si";
 
 export const Skills = () => {
 	const generateId = () => {
@@ -64,6 +64,7 @@ export const Skills = () => {
 								{ id: generateId(), icon: <SiExpress />, name: "ExpressJs" },
 								{ id: generateId(), icon: <SiSocketdotio />, name: "Socket.io" },
 								{ id: generateId(), icon: <SiFirebase />, name: "Firebase" },
+								{ id: generateId(), icon: <SiPostman />, name: "Postman" },
 							].map((techStack) => (
 								<p className="p" key={techStack.id}>
 									{techStack.icon}
