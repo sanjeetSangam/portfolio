@@ -14,7 +14,14 @@ import { TbBrandVscode } from "react-icons/tb";
 // backend icons
 import { FaNodeJs } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
-import { SiExpress, SiSocketdotio, SiFirebase, SiPostman } from "react-icons/si";
+import {
+	SiExpress,
+	SiSocketdotio,
+	SiFirebase,
+	SiPostman,
+	SiNetlify,
+	SiHeroku,
+} from "react-icons/si";
 
 export const Skills = () => {
 	const generateId = () => {
@@ -87,6 +94,8 @@ export const Skills = () => {
 								{ icon: <TbBrandVscode />, name: "Vs Code" },
 								{ icon: <SiCanva />, name: "Canva" },
 								{ icon: <FaSourcetree />, name: "Sourcetree" },
+								{ icon: <SiNetlify />, name: "Netlify" },
+								{ icon: <SiHeroku />, name: "Heroku" },
 							].map((techStach, index) => (
 								<p className="p" key={index}>
 									{techStach.icon}
