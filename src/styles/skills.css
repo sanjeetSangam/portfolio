@@ -1,45 +1,47 @@
 .skills__box {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 5rem;
+	display: grid;
+	width: 100%;
+	/* grid-template-columns: 1fr 1fr; */
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 2rem;
+	padding: 5rem;
 }
 
 .techStacks > h3 {
-  text-align: center;
+	text-align: center;
 }
 
 .techStacks > h3 {
-  color: black;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+	color: black;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
 }
 
 .tech {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
 }
 
 .tech p {
-  color: rgb(68, 3, 57);
-  display: flex;
-  align-items: center;
-  width: max-content;
-  gap: 1rem;
-  font-size: 1.3rem;
-  border: 1px solid #373852;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+	color: rgb(68, 3, 57);
+	display: flex;
+	align-items: center;
+	width: max-content;
+	gap: 1rem;
+	font-size: 1.3rem;
+	border: 1px solid #373852;
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 700px) {
-  .skills__box {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0.5rem;
-    margin-top: 2rem;
-  }
+	.skills__box {
+		/* display: flex;
+    flex-direction: column; */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		padding: 0 0.5rem;
+		margin-top: 2rem;
+	}
 }
