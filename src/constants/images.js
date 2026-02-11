@@ -18,45 +18,46 @@ import sass from "../assets/sass.png";
 import typescript from "../assets/typescript.png";
 import vue from "../assets/vue.png";
 
-import about01 from "../assets/about01.png";
-import about02 from "../assets/about02.png";
-import about03 from "../assets/about03.png";
-import about04 from "../assets/about04.png";
-
 import circle from "../assets/circle.svg";
 
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
 import sangam from "../assets/sangam.png";
+import sanPic from "../assets/mine/pc.JPG";
+import full from "../assets/mine/full.png";
+import codi from "../assets/companies/codinova.jpg";
+import demandfarm from "../assets/companies/demandfarm.jpg";
+import tft from "../assets/companies/tft.jpg";
 
 const images = {
-	email,
-	mobile,
-	api,
-	cpp,
-	css,
-	figma,
-	flutter,
-	git,
-	graphql,
-	html,
-	javascript,
-	mu5,
-	node,
-	python,
-	react,
-	redux,
-	sass,
-	typescript,
-	vue,
-	about01,
-	about02,
-	about03,
-	about04,
-	circle,
-	skype,
-	spotify,
-	sangam,
+  email,
+  mobile,
+  api,
+  cpp,
+  css,
+  figma,
+  flutter,
+  git,
+  graphql,
+  html,
+  javascript,
+  mu5,
+  node,
+  python,
+  react,
+  redux,
+  sass,
+  typescript,
+  vue,
+  circle,
+  skype,
+  spotify,
+  sangam,
+  sanPic,
+  full,
+  codi,
+  demandfarm,
+  tft,
 };
 
 export default images;

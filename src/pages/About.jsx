@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/about.css";
 
-import me from "../assets/sangam.png";
+import me from "../assets/mine/pc.JPG";
 import { Heading } from "../styled-components/Heading";
 
 export const About = () => {
@@ -20,16 +20,15 @@ export const About = () => {
 
         <div className="profile__info">
           <h4 data-aos="fade-down">
-          Experienced full stack developer with two years of professional practice in developing and deploying web applications. <br /> Proficient in multiple programming languages and frameworks, specializing in crafting intuitive and adaptable user interfaces. <br /> Collaborative team player known for strong communication and teamwork abilities.
-            {/* I love to make exciting web apps. <br /> I
-            had completed my B.tech with the stream of Manufacturing Engineering
-            from CIPET college in Ahmedabad. <br />
-            But having a decent interest in computer science brings me to the
-            Web development field and now, I have learnt MERN stack. I wish to
-            work in a technological environment and also I will love to face new
-            challenges in the upcoming days. */}
+            Full-Stack Developer with 3+ years of experience building and
+            shipping production-grade web and cross-platform applications.
             <br />
             <br />
+            Brings pragmatic engineering expertise in shipping maintainable code
+            and developing testable APIs with Node.js and Express. Collaborates
+            closely with product and design teams to transform user problems
+            into impactful, measurable features while mentoring teammates to
+            elevate engineering quality across the stack.
           </h4>
         </div>
       </div>

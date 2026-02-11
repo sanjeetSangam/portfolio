@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import Carousel from "react-elastic-carousel";
 import { Heading } from "../styled-components/Heading";
 import "../styles/projects.css";
-import { client, urlFor } from "../client";
+// import { client, urlFor } from "../client";
 import { motion } from "framer-motion";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 
@@ -15,11 +15,11 @@ export const Projects = () => {
 	useEffect(() => {
 		const query = '*[_type == "works"]';
 
-		client.fetch(query).then((data) => {
-			data.sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt));
-			setWorks(data);
-			setFilterWork(data);
-		});
+		// client.fetch(query).then((data) => {
+		// 	data.sort((a, b) => new Date(b._createdAt) - new Date(a._createdAt));
+		// 	setWorks(data);
+		// 	setFilterWork(data);
+		// });
 	}, []);
 
 	const handleWorkFilter = (item) => {
@@ -73,7 +73,7 @@ export const Projects = () => {
 							key={index}
 						>
 							<div className="app__work-img app__flex">
-								<img src={urlFor(work.imgUrl)} alt={work.name} />
+								{/* <img src={urlFor(work.imgUrl)} alt={work.name} /> */}
 							</div>
 
 							<div className="app__work-content app__flex">
@@ -81,7 +81,7 @@ export const Projects = () => {
 									{work?.teckStacks?.map((stack) => {
 										return (
 											<img
-												src={urlFor(stack)}
+												// src={urlFor(stack)}
 												key={stack._key}
 												alt={stack._key}
 											/>
