@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
-import "../styles/contact.css";
+import React, { useRef } from 'react';
+import '../styles/contact.css';
 
-import { MdEmail } from "react-icons/md";
-import { RiInstagramFill } from "react-icons/ri";
+import { MdEmail } from 'react-icons/md';
+import { RiInstagramFill } from 'react-icons/ri';
 
-import emailjs from "emailjs-com";
-import { Heading } from "../styled-components/Heading";
+import emailjs from 'emailjs-com';
+import { Heading } from '../styled-components/Heading';
 
 export const Contact = () => {
 	const form = useRef();

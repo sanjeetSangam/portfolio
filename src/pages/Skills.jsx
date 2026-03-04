@@ -1,19 +1,25 @@
-import React from "react";
-import { Heading } from "../styled-components/Heading";
-import { Skill } from "../styled-components/Skills";
-import "../styles/skills.css";
+import React from 'react';
+import { Heading } from '../styled-components/Heading';
+import { Skill } from '../styled-components/Skills';
+import '../styles/skills.css';
 
 // icons
-import { DiReact, DiCss3, DiHtml5 } from "react-icons/di";
-import { IoLogoJavascript } from "react-icons/io";
-import { AiFillGithub } from "react-icons/ai";
-import { SiRedux, SiCanva, SiTypescript } from "react-icons/si";
-import { FaJava, FaFigma, FaGitAlt, FaSalesforce, FaSourcetree } from "react-icons/fa";
-import { TbBrandVscode } from "react-icons/tb";
+import { DiReact, DiCss3, DiHtml5 } from 'react-icons/di';
+import { IoLogoJavascript } from 'react-icons/io';
+import { AiFillGithub } from 'react-icons/ai';
+import { SiRedux, SiCanva, SiTypescript } from 'react-icons/si';
+import {
+	FaJava,
+	FaFigma,
+	FaGitAlt,
+	FaSalesforce,
+	FaSourcetree,
+} from 'react-icons/fa';
+import { TbBrandVscode } from 'react-icons/tb';
 
 // backend icons
-import { FaNodeJs } from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
+import { FaNodeJs } from 'react-icons/fa';
+import { DiMongodb } from 'react-icons/di';
 import {
 	SiExpress,
 	SiSocketdotio,
@@ -21,7 +27,7 @@ import {
 	SiPostman,
 	SiNetlify,
 	SiHeroku,
-} from "react-icons/si";
+} from 'react-icons/si';
 
 export const Skills = () => {
 	const generateId = () => {
@@ -42,16 +48,20 @@ export const Skills = () => {
 					<div className="skills__list">
 						<div className="tech">
 							{[
-								{ id: generateId(), icon: <DiReact />, name: "ReactJs" },
-								{ id: generateId(), icon: <SiRedux />, name: "Redux" },
-								{ id: generateId(), icon: <DiHtml5 />, name: "HTML" },
-								{ id: generateId(), icon: <DiCss3 />, name: "CSS" },
+								{ id: generateId(), icon: <DiReact />, name: 'ReactJs' },
+								{ id: generateId(), icon: <SiRedux />, name: 'Redux' },
+								{ id: generateId(), icon: <DiHtml5 />, name: 'HTML' },
+								{ id: generateId(), icon: <DiCss3 />, name: 'CSS' },
 								{
 									id: generateId(),
 									icon: <IoLogoJavascript />,
-									name: "JavaScript",
+									name: 'JavaScript',
 								},
-								{ id: generateId(), icon: <SiTypescript />, name: "Typescript" },
+								{
+									id: generateId(),
+									icon: <SiTypescript />,
+									name: 'Typescript',
+								},
 							].map((techStack) => (
 								<p key={techStack.id}>
 									{techStack.icon} {techStack.name}
@@ -66,12 +76,16 @@ export const Skills = () => {
 					<div className="skills__list">
 						<div className="tech">
 							{[
-								{ id: generateId(), icon: <FaNodeJs />, name: "NodeJs" },
-								{ id: generateId(), icon: <DiMongodb />, name: "MongoDB" },
-								{ id: generateId(), icon: <SiExpress />, name: "ExpressJs" },
-								{ id: generateId(), icon: <SiSocketdotio />, name: "Socket.io" },
-								{ id: generateId(), icon: <SiFirebase />, name: "Firebase" },
-								{ id: generateId(), icon: <SiPostman />, name: "Postman" },
+								{ id: generateId(), icon: <FaNodeJs />, name: 'NodeJs' },
+								{ id: generateId(), icon: <DiMongodb />, name: 'MongoDB' },
+								{ id: generateId(), icon: <SiExpress />, name: 'ExpressJs' },
+								{
+									id: generateId(),
+									icon: <SiSocketdotio />,
+									name: 'Socket.io',
+								},
+								{ id: generateId(), icon: <SiFirebase />, name: 'Firebase' },
+								{ id: generateId(), icon: <SiPostman />, name: 'Postman' },
 							].map((techStack) => (
 								<p className="p" key={techStack.id}>
 									{techStack.icon}
@@ -86,16 +100,16 @@ export const Skills = () => {
 					<div className="skills__list">
 						<div className="tech">
 							{[
-								{ icon: <FaJava />, name: "Java" },
-								{ icon: <FaSalesforce />, name: "Salesforce" },
-								{ icon: <FaGitAlt />, name: "Git" },
-								{ icon: <AiFillGithub />, name: "Github" },
-								{ icon: <FaFigma />, name: "Figma" },
-								{ icon: <TbBrandVscode />, name: "Vs Code" },
-								{ icon: <SiCanva />, name: "Canva" },
-								{ icon: <FaSourcetree />, name: "Sourcetree" },
-								{ icon: <SiNetlify />, name: "Netlify" },
-								{ icon: <SiHeroku />, name: "Heroku" },
+								{ icon: <FaJava />, name: 'Java' },
+								{ icon: <FaSalesforce />, name: 'Salesforce' },
+								{ icon: <FaGitAlt />, name: 'Git' },
+								{ icon: <AiFillGithub />, name: 'Github' },
+								{ icon: <FaFigma />, name: 'Figma' },
+								{ icon: <TbBrandVscode />, name: 'Vs Code' },
+								{ icon: <SiCanva />, name: 'Canva' },
+								{ icon: <FaSourcetree />, name: 'Sourcetree' },
+								{ icon: <SiNetlify />, name: 'Netlify' },
+								{ icon: <SiHeroku />, name: 'Heroku' },
 							].map((techStach, index) => (
 								<p className="p" key={index}>
 									{techStach.icon}

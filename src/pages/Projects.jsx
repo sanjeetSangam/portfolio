@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 // import Carousel from "react-elastic-carousel";
-import { Heading } from "../styled-components/Heading";
-import "../styles/projects.css";
+import { Heading } from '../styled-components/Heading';
+import '../styles/projects.css';
 // import { client, urlFor } from "../client";
-import { motion } from "framer-motion";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { motion } from 'framer-motion';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 
 export const Projects = () => {
 	const [works, setWorks] = useState([]);
 	const [filterWork, setFilterWork] = useState([]);
-	const [activeFilter, setActiveFilter] = useState("All");
+	const [activeFilter, setActiveFilter] = useState('All');
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
 	useEffect(() => {
@@ -29,7 +29,7 @@ export const Projects = () => {
 		setTimeout(() => {
 			setAnimateCard([{ y: 0, opacity: 1 }]);
 
-			if (item === "All") {
+			if (item === 'All') {
 				setFilterWork(works);
 			} else {
 				setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -46,17 +46,19 @@ export const Projects = () => {
 			</div>
 
 			<div className="app__work-filter">
-				{["MERN", "Web App", "Node Js", "React JS", "All"].map((item, index) => (
-					<div
-						key={index}
-						onClick={() => handleWorkFilter(item)}
-						className={`app__work-filter-item app__flex p-text ${
-							activeFilter === item ? "item-active" : ""
-						}`}
-					>
-						{item}
-					</div>
-				))}
+				{['MERN', 'Web App', 'Node Js', 'React JS', 'All'].map(
+					(item, index) => (
+						<div
+							key={index}
+							onClick={() => handleWorkFilter(item)}
+							className={`app__work-filter-item app__flex p-text ${
+								activeFilter === item ? 'item-active' : ''
+							}`}
+						>
+							{item}
+						</div>
+					)
+				)}
 			</div>
 
 			<motion.div
@@ -101,7 +103,7 @@ export const Projects = () => {
 								<motion.div
 									transition={{
 										duration: 0.25,
-										ease: "easeInOut",
+										ease: 'easeInOut',
 										staggerChildren: 0.5,
 									}}
 									className="project__links app__flex"
