@@ -29,6 +29,8 @@ import codi from '../assets/companies/codinova.jpg';
 import demandfarm from '../assets/companies/demandfarm.jpg';
 import tft from '../assets/companies/tft.jpg';
 
+import gharbnao from '../assets/gharbnao.png';
+
 const images = {
   email,
   mobile,
@@ -58,6 +60,7 @@ const images = {
   codi,
   demandfarm,
   tft,
+  gharbnao,
 };
 
 export default images;

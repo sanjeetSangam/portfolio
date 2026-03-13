@@ -5,7 +5,7 @@ export const portfolioData = {
     home: true,
     about: true,
     skills: true,
-    projects: false,
+    projects: true,
     experience: true,
     contact: true,
   },
@@ -116,29 +116,20 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: 'E-Commerce Hub',
+      title: 'GharBnao',
+      description:
+        "India's most advanced construction cost forecasting tool. It provides hyper-accurate estimates for materials, labor, and finishing based on 2026 market projections.",
+      image: images.gharbnao,
+      tags: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      demo: 'https://gharbnao-web.vercel.app/',
+      github: 'https://github.com/sanjeetSangam/gharbnao-web', // Assuming standard naming, or can leave as # if unknown
+    },
+    {
+      title: 'E-Commerce Platform',
       description:
         'A feature-rich MERN stack e-commerce platform with real-time inventory management, secure payments, and a dynamic dashboard.',
       image: images.api,
       tags: ['MERN', 'Web App', 'Stripe'],
-      demo: '#',
-      github: '#',
-    },
-    {
-      title: 'SaaS Dashboard',
-      description:
-        'Enterprise-grade analytics dashboard with complex data visualization, user roles, and team collaboration features.',
-      image: images.mu5,
-      tags: ['React JS', 'Node Js', 'D3.js'],
-      demo: '#',
-      github: '#',
-    },
-    {
-      title: 'Real-time Collaboration Tool',
-      description:
-        'A collaborative workspace with live editing, chat, and file sharing using Socket.io and Redis.',
-      image: images.react,
-      tags: ['Socket.io', 'React JS', 'Node Js'],
       demo: '#',
       github: '#',
     },
