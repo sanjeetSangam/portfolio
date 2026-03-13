@@ -122,16 +122,7 @@ export const portfolioData = {
       image: images.gharbnao,
       tags: ['Next.js', 'Tailwind CSS', 'Vercel'],
       demo: 'https://gharbnao-web.vercel.app/',
-      github: 'https://github.com/sanjeetSangam/gharbnao-web', // Assuming standard naming, or can leave as # if unknown
-    },
-    {
-      title: 'E-Commerce Platform',
-      description:
-        'A feature-rich MERN stack e-commerce platform with real-time inventory management, secure payments, and a dynamic dashboard.',
-      image: images.api,
-      tags: ['MERN', 'Web App', 'Stripe'],
-      demo: '#',
-      github: '#',
+      github: 'https://github.com/sanjeetSangam/gharbnao',
     },
   ],
 };
