@@ -17,7 +17,7 @@ The **"Studio Minimalist"** experience focuses on **Architectural Symmetry** and
 
 ### **The Profile**
 <div align="center">
-  <img src="./src/assets/sangam.png" width="200" style="border-radius: 50%; border: 4px solid #3B82F6;" alt="Sanjeet Kumar Sangam Logo"/>
+  <img src="./src/assets/mine/pc.webp" width="200" style="border-radius: 50%; border: 4px solid #3B82F6;" alt="Sanjeet Kumar Sangam Logo"/>
   <p align="center"><i>Engineering production-grade, high-availability ecosystems.</i></p>
 </div>
 
