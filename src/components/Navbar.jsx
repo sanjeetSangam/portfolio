@@ -14,6 +14,7 @@ import {
 import { portfolioData } from '../data/portfolio';
 import { cn } from './ui/Button';
 import { useThemeStore } from '../store/useThemeStore';
+import { Tooltip } from './ui/Tooltip';
 
 const allNavLinks = [
   { name: 'Home', to: 'home', key: 'home' },
@@ -93,31 +94,49 @@ export const Navbar = () => {
 
         {/* CTA & Theme toggle */}
         <div className="hidden md:flex items-center gap-6">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-navy/5 dark:hover:bg-ghost/10 transition-colors text-navy dark:text-ghost"
-          >
-            {theme === 'light' ? <Moon size={22} /> : <Sun size={22} />}
-          </button>
+          {/* Theme Toggle */}
+          <Tooltip text="Toggle Theme">
+            <button
+              onClick={toggleTheme}
+              className="p-3 rounded-2xl bg-white/5 dark:bg-ghost/5 text-navy dark:text-ghost hover:scale-110 active:scale-95 transition-all duration-300 border border-navy/5 dark:border-mint/10 group"
+            >
+              {theme === 'light' ? (
+                <Moon
+                  size={20}
+                  className="group-hover:text-steel transition-colors"
+                />
+              ) : (
+                <Sun
+                  size={20}
+                  className="group-hover:text-mint transition-colors"
+                />
+              )}
+            </button>
+          </Tooltip>
 
-          <div className="h-6 w-px bg-navy/10 dark:bg-ghost/10" />
-
-          <a
-            href={portfolioData.personal.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            className="text-navy/40 dark:text-mint hover:text-navy dark:hover:text-ghost transition-colors"
-          >
-            <Github size={22} />
-          </a>
-          <a
-            href={portfolioData.personal.socials.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="text-navy/40 dark:text-mint hover:text-navy dark:hover:text-ghost transition-colors"
-          >
-            <Linkedin size={22} />
-          </a>
+          {/* Social Links */}
+          <div className="hidden md:flex items-center gap-2 pl-4 border-l border-navy/10 dark:border-ghost/10">
+            <Tooltip text="GitHub Profile">
+              <a
+                href={portfolioData.personal.socials.github}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 text-navy/40 dark:text-ghost/40 hover:text-steel dark:hover:text-mint transition-all duration-300 hover:scale-110"
+              >
+                <Github size={20} />
+              </a>
+            </Tooltip>
+            <Tooltip text="LinkedIn Profile">
+              <a
+                href={portfolioData.personal.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="p-3 text-navy/40 dark:text-ghost/40 hover:text-steel dark:hover:text-mint transition-all duration-300 hover:scale-110"
+              >
+                <Linkedin size={20} />
+              </a>
+            </Tooltip>
+          </div>
         </div>
 
         {/* Mobile Toggle & Theme toggle */}
@@ -221,7 +240,7 @@ export const Navbar = () => {
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.5 + idx * 0.1 }}
-                          className="text-navy/40 dark:text-ghost/40 hover:text-steel dark:hover:text-mint transition-colors"
+                          className="text-navy/40 dark:text-ghost/40 hover:text-steel dark:hover:text-mint transition-colors block"
                         >
                           <Icon size={28} />
                         </motion.a>

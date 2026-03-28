@@ -2,6 +2,7 @@ import React from 'react';
 import { portfolioData } from '../data/portfolio';
 import { Github, Linkedin, Youtube, Instagram, Heart } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { Tooltip } from './ui/Tooltip';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -31,21 +32,23 @@ export const Footer = () => {
             <p className="text-navy/50 dark:text-ghost/50 max-w-sm text-base md:text-lg font-medium leading-relaxed mb-8 md:mb-10">
               {portfolioData.footer.description}
             </p>
-            <div className="flex gap-6 md:gap-8">
+            <div className="flex gap-6 md:gap-8 w-max">
               {Object.entries(portfolioData.personal.socials).map(
                 ([platform, url]) => (
-                  <a
-                    key={platform}
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-1 text-navy/40 dark:text-mint hover:text-navy dark:hover:text-ghost transition-all hover:-translate-y-1"
-                  >
-                    {platform === 'github' && <Github size={22} />}
-                    {platform === 'linkedin' && <Linkedin size={22} />}
-                    {platform === 'youtube' && <Youtube size={22} />}
-                    {platform === 'instagram' && <Instagram size={22} />}
-                  </a>
+                  <Tooltip key={platform} text={`${platform.charAt(0).toUpperCase() + platform.slice(1)} Profile`}>
+                    <a
+                      key={platform}
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-1 text-navy/40 dark:text-mint hover:text-navy dark:hover:text-ghost transition-all hover:-translate-y-1 block"
+                    >
+                      {platform === 'github' && <Github size={22} />}
+                      {platform === 'linkedin' && <Linkedin size={22} />}
+                      {platform === 'youtube' && <Youtube size={22} />}
+                      {platform === 'instagram' && <Instagram size={22} />}
+                    </a>
+                  </Tooltip>
                 )
               )}
             </div>
@@ -100,7 +103,7 @@ export const Footer = () => {
           </p>
           <div className="flex items-center gap-3 text-navy/30 dark:text-ghost/30 text-[10px] md:text-xs font-black uppercase tracking-widest">
             ENGINEERED WITH{' '}
-            <Heart size={14} className="text-steel fill-steel" />{' '}
+              <Heart size={14} className="text-steel fill-steel cursor-help" />
             {portfolioData.footer.heartText}
           </div>
         </div>

@@ -15,25 +15,25 @@ export const Button = ({
 }) => {
   const variants = {
     primary:
-      'bg-steel dark:bg-mint text-white dark:text-navy hover:bg-steel/90 dark:hover:bg-mint/90 shadow-lg shadow-steel/20 dark:shadow-mint/10 font-black tracking-tight',
+      'bg-accent text-white hover:bg-accent/90 shadow-md shadow-accent/20 font-bold tracking-tight',
     secondary:
-      'bg-navy dark:bg-ghost text-white dark:text-navy hover:bg-navy/90 dark:hover:bg-ghost/90',
+      'bg-primary-light text-primary hover:bg-primary-light/90 dark:bg-zinc-800 dark:text-zinc-200 shadow-sm border border-black/5 dark:border-white/5 font-bold tracking-tight',
     outline:
-      'bg-transparent border-2 border-steel dark:border-mint text-steel dark:text-mint hover:bg-steel/5 dark:hover:bg-mint/10 font-black tracking-tight',
+      'bg-transparent border-2 border-accent text-accent hover:bg-accent/5 font-bold tracking-tight',
     ghost:
-      'bg-transparent text-navy dark:text-ghost hover:bg-navy/5 dark:hover:bg-ghost/10 font-bold',
+      'bg-transparent text-primary dark:text-primary-light hover:bg-primary/5 dark:hover:bg-primary-light/5 font-bold',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-xs md:text-sm',
-    md: 'px-6 py-3 text-sm md:text-base',
-    lg: 'px-8 py-4 text-sm md:text-lg',
+    sm: 'px-4 py-2 text-[10px]',
+    md: 'px-6 py-2.5 text-[11px]',
+    lg: 'px-8 py-3.5 text-xs',
   };
 
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center rounded-xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none uppercase tracking-widest',
+        'inline-flex items-center justify-center rounded-lg transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none uppercase tracking-[0.1em]',
         variants[variant],
         sizes[size],
         className

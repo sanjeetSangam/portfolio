@@ -6,21 +6,26 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1d3557',
-          light: '#f1faee',
+          DEFAULT: '#1E293B', // Slate-800 (Light Mode Text - Softer)
+          light: '#E2E8F0',   // Slate-200 (Dark Mode Text - Softer)
         },
         secondary: {
-          DEFAULT: '#457b9d',
-          light: '#a8dadc',
+          DEFAULT: '#64748B', // Slate-500 (Light Mode Muted)
+          light: '#94A3B8',   // Slate-400 (Dark Mode Muted)
         },
-        accent: '#e63946', // Adding a punchy accent for visibility
-        navy: '#1d3557',
-        steel: '#457b9d',
-        mint: '#a8dadc',
-        ghost: '#f1faee',
+        accent: {
+          DEFAULT: '#3B82F6', // Blue-500 (Professional Azure)
+          light: '#60A5FA',   // Blue-400 (Soft Azure)
+        },
+        // Legacy Mappings (Redirected for stability)
+        navy: '#1E293B',
+        'navy-deep': '#0F172A', // Slate-900 (Softer Dark BG)
+        steel: '#3B82F6', 
+        mint: '#60A5FA',
+        ghost: '#E2E8F0',
         background: {
-          dark: '#0a192f',
-          light: '#ffffff',
+          dark: '#0F172A',
+          light: '#F8FAFC',
         },
       },
       fontFamily: {
