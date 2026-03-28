@@ -1,4 +1,9 @@
-import { images } from '../constants';
+import thekedar from '../assets/thekedar.png';
+import gharbnao from '../assets/gharbnao.png';
+import swiftlink from '../assets/swiftlink.png';
+import tft from '../assets/companies/tft.jpg';
+import codi from '../assets/companies/codinova.jpg';
+import demandfarm from '../assets/companies/demandfarm.jpg';
 
 export const portfolioData = {
   visibility: {
@@ -13,17 +18,17 @@ export const portfolioData = {
     name: 'Sanjeet Kumar Sangam',
     firstName: 'Sanjeet',
     lastName: 'Sangam',
-    title: 'Full Stack Developer',
-    badge: 'Full Stack Professional',
+    title: 'GOAL: Senior Full Stack & DevOps Architect',
+    badge: 'GOAL: Senior Software Architect & DevOps Lead',
     heroSubtitle: 'I am',
-    heroDescription: 'Mastering the art of Scalable Web Solutions.',
-    aboutHeading: 'Solving complex problems with elegant engineering.',
-    roles: ['Full Stack Developer 👨‍💻', 'Artist 🎨', 'YouTuber 📽️'],
-    about: `Full-Stack Developer with 3+ years of experience building and shipping production-grade web and cross-platform applications. Brings pragmatic engineering expertise in shipping maintainable code and developing testable APIs with Node.js and Express. Collaborates closely with product and design teams to transform user problems into impactful, measurable features while mentoring teammates to elevate engineering quality across the stack.`,
+    heroDescription: 'Building Resilient, Scalable, and Automated Solutions for the Modern Web.',
+    aboutHeading: 'Architecting high-performance ecosystems with engineering precision.',
+    roles: ['Architect 🏗️', 'Full Stack Developer 👨‍💻', 'DevOps Specialist 🛡️'],
+    about: 'Distinguished Full-Stack & DevOps Architect with over 3 years of hands-on experience in engineering production-grade, high-availability ecosystems. Expert in bridging the gap between sophisticated backend architectures and polished frontend experiences, with a core focus on security, automation (CI/CD), and accessibility (WCAG). Demonstrated track record in transforming complex business requirements into high-performance digital products while maintaining technical excellence and mentoring specialized engineering teams.',
     stats: [
       { label: 'Years Exp', value: '3+' },
-      { label: 'Shipped', value: '20+' },
-      { label: 'Technologies', value: '50+' },
+      { label: 'Shipped', value: '' },
+      { label: 'Technologies', value: '' },
     ],
     contact: {
       email: 'asanjeetsangam15@gmail.com',
@@ -62,11 +67,22 @@ export const portfolioData = {
       category: 'Backend',
       items: [
         { name: 'NodeJs', icon: 'Node' },
+        { name: 'FastAPI (Python)', icon: 'Python' },
         { name: 'MongoDB', icon: 'Mongodb' },
         { name: 'ExpressJs', icon: 'Express' },
         { name: 'Socket.io', icon: 'Socket' },
-        { name: 'Firebase', icon: 'Firebase' },
-        { name: 'Postman', icon: 'Postman' },
+        { name: 'Motor', icon: 'Python' },
+      ],
+    },
+    {
+      category: 'DevOps & Infra',
+      items: [
+        { name: 'Docker', icon: 'Docker' },
+        { name: 'GitHub Actions', icon: 'Github' },
+        { name: 'Caddy', icon: 'Api' },
+        { name: 'Docker Compose', icon: 'Docker' },
+        { name: 'Linux/Bash', icon: 'Vscode' },
+        { name: 'Husky', icon: 'Git' },
       ],
     },
     {
@@ -93,7 +109,7 @@ export const portfolioData = {
       period: '2024 - Present',
       description:
         'Fullstack Developer and Accessibility Specialist focused on building scalable applications while ensuring WCAG compliance. Implemented accessible UI components and performed accessibility audits.',
-      logo: images.tft,
+      logo: tft,
     },
     {
       id: 2,
@@ -102,7 +118,7 @@ export const portfolioData = {
       period: 'June 2024 - Nov 2024',
       description:
         'Full Stack Developer specializing in modern web technologies. Built responsive applications using React.js, Next.js with GraphQL APIs and developed cross-platform solutions using React Native.',
-      logo: images.codi,
+      logo: codi,
     },
     {
       id: 1,
@@ -111,18 +127,64 @@ export const portfolioData = {
       period: '2022 - 2024',
       description:
         'Fullstack Developer with 2-year tenure building end-to-end solutions. Developed intuitive frontend interfaces and robust backend systems, improving performance and user experience across platforms.',
-      logo: images.demandfarm,
+      logo: demandfarm,
     },
   ],
   projects: [
     {
-      title: 'GharBnao',
+      title: 'Thekedar (Star Product)',
       description:
-        "India's most advanced construction cost forecasting tool. It provides hyper-accurate estimates for materials, labor, and finishing based on 2026 market projections.",
-      image: images.gharbnao,
-      tags: ['Next.js', 'Tailwind CSS', 'Vercel'],
-      demo: 'https://gharbnao-web.vercel.app/',
-      github: 'https://github.com/sanjeetSangam/gharbnao',
+        "A premium Construction Management ERP for workforce and financial orchestration. Features automated wage calculation, expense categorization, and intelligent PDF site audits.",
+      longDescription:
+        "Thekedar is a comprehensive ERP solution designed specifically for construction contractors. It solves the fragmentation of site data by centralizing labor attendance, material expenses, and financial ledgers into a single source of truth. The application focuses on high-precision data entry and automated generation of complex financial reports, reducing administrative overhead by up to 40%.",
+      keyFeatures: [
+        'Automated Daily Wage & Attendance Engine',
+        'Real-time Actual vs. Budget Monitoring',
+        'Intelligent PDF Report Generation with jsPDF',
+        'Secure Supabase Auth & Real-time DB Sync',
+      ],
+      image: thekedar,
+      tags: ['React 19', 'Tailwind v4', 'Supabase', 'React Router 7'],
+      status: 'Commercial / Private Repo',
+      github: '',
+      demo: 'https://thekedar.gharbnao.in/',
+    },
+    {
+      title: 'SwiftLink Pro',
+      description:
+        "A DevOps-first URL redirection engine architected for extreme performance. Features secure reverse-proxy isolation (Caddy), Asynchronous I/O redirection, and CI/CD automated build gates.",
+      longDescription:
+        "SwiftLink Pro is an infrastructure-heavy project designed to handle deep-link redirection with sub-millisecond latency. The project demonstrates advanced container orchestration and security practices, including a hardened reverse-proxy setup and automated quality gates that prevent broken builds from ever reaching production.",
+      keyFeatures: [
+        'Asynchronous Python Backend (FastAPI)',
+        'Isolated Dockerized Microservices Stack',
+        'Caddy Reverse Proxy with Dynamic Routing',
+        'Automated GitHub Actions CI/CD Pipeline',
+        'Centralized Environment Management (12-Factor App)',
+      ],
+      image: swiftlink,
+      tags: ['Next.js 16', 'FastAPI', 'MongoDB', 'Docker'],
+      status: 'Will be Live Soon',
+      github: 'https://github.com/sanjeetSangam/swiftlink-pro',
+    },
+    {
+      title: 'GharBnao (Forecasting Engine)',
+      description:
+        "India's most advanced construction cost forecasting tool. Provides hyper-accurate material and labor estimates based on 2026 market projections with optimized SEO and Hindi i18n support.",
+      longDescription:
+        "GharBnao is a specialized forecasting engine that predicts construction costs with high precision. It uses complex mathematical models to account for inflation and market trends, providing users with a realistic glimpse into their future project budgets. It is built for maximum accessibility and SEO reach across India.",
+      keyFeatures: [
+        'Advanced Cost Calculation Algorithms',
+        '2026 Market Trend Projections',
+        'Optimized Next.js SEO & Meta Architecture',
+        'Responsive, Mobile-First User Experience',
+        'Hindi i18n Localization Engine',
+      ],
+      image: gharbnao,
+      tags: ['Next.js', 'Tailwind CSS', 'i18n Metadata'],
+      demo: 'https://gharbnao.in/',
+      github: '',
+      status: 'Commercial / Private Repo',
     },
   ],
 };

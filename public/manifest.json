@@ -1,0 +1,25 @@
+{
+  "short_name": "Sanjeet",
+  "name": "Sanjeet Kumar Sangam | Senior Software Architect",
+  "icons": [
+    {
+      "src": "https://avatars.githubusercontent.com/u/93376461?v=4",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://avatars.githubusercontent.com/u/93376461?v=4",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://avatars.githubusercontent.com/u/93376461?v=4",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1E293B",
+  "background_color": "#F8FAFC"
+}

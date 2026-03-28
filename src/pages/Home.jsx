@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { portfolioData } from '../data/portfolio';
 import { Button } from '../components/ui/Button';
+import { Tooltip } from '../components/ui/Tooltip';
 import {
   Github,
   Linkedin,
@@ -12,13 +13,6 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { Link } from 'react-scroll';
-
-const socialIcons = {
-  github: Github,
-  linkedin: Linkedin,
-  youtube: Youtube,
-  instagram: Instagram,
-};
 
 export const Home = () => {
   const { personal } = portfolioData;
@@ -47,34 +41,25 @@ export const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 flex items-center gap-2 rounded-full border border-steel/20 bg-steel/10 px-3 py-1 text-[9px] font-black uppercase tracking-widest text-steel dark:border-mint/20 dark:bg-steel/10 dark:text-mint md:mb-8 md:text-[10px]"
+            className="mb-6 flex items-center gap-2 rounded-full border border-primary/5 bg-primary/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-accent dark:border-accent-light/10 dark:bg-accent-light/5 dark:text-accent-light md:mb-8"
           >
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-steel dark:bg-mint" />
+            <span className="h-1 w-1 animate-pulse rounded-full bg-accent dark:bg-accent-light" />
             {personal.badge}
           </motion.div>
-
-          <motion.h3
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="mb-2 text-lg font-medium text-navy/60 dark:text-ghost/60 md:mb-3 md:text-2xl"
-          >
-            {personal.heroSubtitle}
-          </motion.h3>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mb-6 text-4xl font-black leading-[0.95] tracking-tighter text-navy dark:text-ghost md:mb-8 md:text-6xl lg:text-7xl"
+            transition={{ delay: 0.1 }}
+            className="mb-4 text-3xl font-black leading-[1.2] tracking-tighter text-primary dark:text-primary-light md:mb-6 md:text-5xl lg:text-5xl uppercase"
           >
             {personal.name.split(' ').map((word, i) => (
               <span
                 key={i}
                 className={
                   i === personal.name.split(' ').length - 1
-                    ? 'block text-steel dark:text-mint'
-                    : 'block'
+                    ? 'inline-block text-accent dark:text-accent-light ml-2 md:ml-3'
+                    : 'inline-block mr-2'
                 }
               >
                 {word}
@@ -82,18 +67,23 @@ export const Home = () => {
             ))}
           </motion.h1>
 
-          <div className="mb-8 min-h-[40px] md:mb-10 md:min-h-[60px]">
+          <div className="mb-6 min-h-[24px] md:mb-8 md:min-h-[40px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={roleIndex}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: 'circOut' }}
-                className="flex items-center gap-3 text-xl font-bold text-navy/70 dark:text-mint md:text-3xl lg:text-4xl"
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="flex items-center gap-2.5 text-lg font-bold text-secondary dark:text-accent-light md:text-2xl tracking-tight"
               >
-                <Sparkles className="text-steel dark:text-mint" size={24} />
-                <span className="tracking-tight">{personal.roles[roleIndex]}</span>
+                <Sparkles
+                  className="text-accent dark:text-accent-light shrink-0"
+                  size={18}
+                />
+                <span className="leading-tight capitalize">
+                  {personal.roles[roleIndex]}
+                </span>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -101,8 +91,8 @@ export const Home = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mb-8 max-w-xl text-base font-medium leading-relaxed text-navy/60 dark:text-ghost/60 md:mb-10 md:text-lg"
+            transition={{ delay: 0.3 }}
+            className="mb-8 max-w-lg text-sm font-medium leading-[1.6] text-secondary dark:text-primary-light/60 md:mb-10 md:text-base"
           >
             {personal.heroDescription}
           </motion.p>
@@ -110,8 +100,8 @@ export const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mb-12 flex w-full flex-col gap-4 sm:w-auto sm:flex-row md:gap-6"
+            transition={{ delay: 0.4 }}
+            className="mb-10 flex w-full flex-col gap-3.5 sm:w-auto sm:flex-row md:gap-5"
           >
             <a
               href={personal.resumeUrl}
@@ -120,12 +110,12 @@ export const Home = () => {
               className="w-full sm:w-auto"
             >
               <Button
-                size="lg"
-                className="group w-full gap-3 shadow-2xl shadow-steel/20 dark:shadow-mint/10"
+                size="md"
+                className="group w-full gap-2.5 shadow-md shadow-accent/5 dark:shadow-accent-light/5 px-6 py-5 text-sm bg-accent hover:bg-accent/90 dark:bg-accent-light dark:hover:bg-accent-light/90 dark:text-primary"
               >
                 <Download
-                  size={20}
-                  className="transition-transform group-hover:translate-y-1"
+                  size={18}
+                  className="transition-transform group-hover:translate-y-0.5"
                 />
                 Get Resume
               </Button>
@@ -138,34 +128,53 @@ export const Home = () => {
             >
               <Button
                 variant="outline"
-                size="lg"
-                className="w-full border-steel text-steel transition-all duration-300 hover:bg-steel/10 dark:border-mint dark:text-mint"
+                size="md"
+                className="w-full border-accent text-accent transition-all duration-300 hover:bg-accent/10 dark:border-accent-light dark:text-accent-light px-6 py-5 text-sm"
               >
-                Let's Talk
+                Inquiry
               </Button>
             </Link>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="flex items-center gap-6 md:gap-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1 }}
+            className="flex items-center gap-8 mt-4"
           >
-            {Object.entries(personal.socials).map(([platform, url]) => {
-              const Icon = socialIcons[platform];
-              return (
+            {[
+              {
+                icon: <Linkedin size={24} />,
+                url: portfolioData.personal.socials.linkedin,
+                label: 'LinkedIn',
+              },
+              {
+                icon: <Github size={24} />,
+                url: portfolioData.personal.socials.github,
+                label: 'GitHub',
+              },
+              {
+                icon: <Youtube size={24} />,
+                url: portfolioData.personal.socials.youtube,
+                label: 'YouTube',
+              },
+              {
+                icon: <Instagram size={24} />,
+                url: portfolioData.personal.socials.instagram,
+                label: 'Instagram',
+              },
+            ].map((social, idx) => (
+              <Tooltip key={idx} text={`${social.label}`}>
                 <a
-                  key={platform}
-                  href={url}
+                  href={social.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-navy/30 transition-all duration-300 hover:-translate-y-1 hover:text-steel dark:text-ghost/30 dark:hover:text-mint"
+                  className="w-14 h-14 rounded-[1.5rem] flex items-center justify-center bg-white/5 dark:bg-ghost/5 text-navy/30 dark:text-ghost/30 hover:text-steel dark:hover:text-mint hover:scale-110 active:scale-95 transition-all duration-300 border border-navy/5 dark:border-mint/10"
                 >
-                  <Icon size={26} />
+                  {social.icon}
                 </a>
-              );
-            })}
+              </Tooltip>
+            ))}
           </motion.div>
         </div>
 
@@ -175,22 +184,26 @@ export const Home = () => {
           transition={{ delay: 0.4, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="relative hidden lg:col-span-12 xl:block xl:col-span-5"
         >
-          <div className="relative z-10 overflow-hidden rounded-3xl border-4 border-steel/10 shadow-[0_0_50px_rgba(69,123,157,0.2)] dark:border-navy">
+          <div className="relative z-10 overflow-hidden rounded-[3rem] border-2 border-steel/5 shadow-2xl dark:border-navy-deep ring-1 ring-inset ring-white/10">
             <img
-              src={require('../assets/mine/pc.JPG')}
+              src={require('../assets/mine/pc.webp')}
               alt={personal.name}
-              className="h-auto w-full scale-105 brightness-90 grayscale transition-all duration-1000 hover:scale-100 hover:brightness-100 hover:grayscale-0"
+              className="h-auto w-full scale-105 transition-all duration-1000 hover:scale-100"
             />
           </div>
-          <div className="absolute -top-10 -right-10 -z-0 h-40 w-40 rounded-full bg-mint/10 blur-3xl" />
-          <div className="absolute -bottom-8 -left-8 -z-0 h-60 w-60 rounded-full bg-steel/10 blur-3xl" />
+          <div className="absolute -top-20 -right-20 -z-0 h-64 w-64 rounded-full bg-mint/5 blur-3xl" />
+          <div className="absolute -bottom-16 -left-16 -z-0 h-80 w-80 rounded-full bg-steel/5 blur-3xl" />
         </motion.div>
       </div>
 
       <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 cursor-pointer flex-col items-center gap-3 text-navy/30 dark:text-mint/40 md:bottom-10"
+        className="absolute bottom-6 left-1/2 md:bottom-10 z-10 flex cursor-pointer flex-col items-center gap-3 text-navy/30 dark:text-mint/40 animate-passive-float"
+        onClick={() => {
+          const element = document.getElementById('about');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
       >
         <span className="text-[10px] font-black uppercase tracking-[0.3em]">
           Scroll

@@ -1,0 +1,23 @@
+refactor: perform surgical repository optimization and performance audit
+
+- Asset Optimization: 
+  - Reduced repository footprint by ~60MB through a rigorous purge of unoptimized/redundant assets.
+  - Converted 14MB raw profile image (pc.JPG) to high-fidelity WebP (34KB), achieving a 99.7% size reduction.
+  - Eliminated high-resolution heritage photos (full.png, DSC03320.jpg) and legacy icon sets (12 files) to improve clone and build latency.
+
+- Performance & Stability:
+  - Transitioned 'Scroll' indicator animation from JavaScript-driven Framer Motion to GPU-accelerated CSS Keyframes.
+  - Resolved "continuous DOM updates" in DevTools by offloading infinite loops to the browser's compositor thread.
+  - Improved console debugging stability by eliminating rapid style attribute rewrites.
+
+- Dependency & Boilerplate Purge:
+  - Pruned package.json of unused libraries: react-router-dom, web-vitals, and dotenv.
+  - Excised dangling components (Loader, FirstLoader) and legacy data/constant skeletons.
+  - Removed Create React App boilerplate assets (logo192.png, logo512.png) from the public directory.
+
+- Branding & SEO:
+  - Deployed custom branding via professional GitHub avatar as favicon and social OpenGraph preview.
+  - Scrubbed index.html of legacy boilerplate comments for a 100% custom-branded production output.
+  - Refactored portfolioData to utilize a high-performance 'Direct Import' asset architecture.
+
+Verified: Production build (npm run build) compiled successfully with zero regressions.

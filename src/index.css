@@ -10,11 +10,11 @@
   }
 
   body:not(.dark) {
-    @apply bg-white text-navy font-inter antialiased;
+    @apply bg-white text-gray-950 font-inter antialiased;
   }
 
   body.dark {
-    @apply bg-[#0a192f] text-ghost font-inter antialiased;
+    @apply bg-[#09090B] text-gray-100 font-inter antialiased;
   }
 
   h1,
@@ -29,10 +29,23 @@
 
 @layer components {
   .glass {
-    @apply bg-[#1d3557]/80 backdrop-blur-md border border-white/10;
+    @apply bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/10;
   }
 
   .card-gradient {
-    @apply bg-gradient-to-br from-[#1d3557] to-[#457b9d]/30;
+    @apply bg-gradient-to-br from-white/5 to-white/[0.02] dark:from-white/[0.03] dark:to-white/[0.01];
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  50% {
+    transform: translateY(10px) translateX(-50%);
+  }
+}
+
+.animate-passive-float {
+  animation: float 2s ease-in-out infinite;
 }

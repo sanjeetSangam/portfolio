@@ -2,85 +2,65 @@ import React from 'react';
 import { Section, SectionHeading } from '../components/ui/Section';
 import { portfolioData } from '../data/portfolio';
 import { motion } from 'framer-motion';
+import * as Icons from 'lucide-react';
 
 export const Experiences = () => {
   return (
     <Section id="experience" className="bg-white dark:bg-background-dark">
       <SectionHeading subtitle="Career">Professional Experience</SectionHeading>
 
-      <div className="relative max-w-5xl mx-auto py-10">
-        {/* Main Timeline Line */}
-        <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 md:w-1.5 bg-navy/5 dark:bg-navy/40 -translate-x-1/2 rounded-full overflow-hidden">
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: '100%' }}
-            viewport={{ once: true }}
-            transition={{ duration: 2, ease: 'easeInOut' }}
-            className="w-full bg-steel dark:bg-mint"
-          />
-        </div>
-
-        <div className="space-y-12 md:space-y-16">
+      <div className="relative max-w-5xl mx-auto py-4 md:py-8">
+        <div className="flex flex-col gap-8 md:gap-10 relative">
+          {/* Main Timeline Line - Monochrome Subtle */}
+          <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 w-px bg-zinc-200 dark:bg-zinc-800 -translate-x-1/2 hidden md:block" />
+          
           {portfolioData.experiences.map((exp, idx) => (
             <motion.div
-              key={exp.id}
-              initial={{
-                opacity: 0,
-                x:
-                  idx % 2 === 0
-                    ? window.innerWidth < 768
-                      ? -20
-                      : -40
-                    : window.innerWidth < 768
-                      ? -20
-                      : 40,
-              }}
-              whileInView={{ opacity: 1, x: 0 }}
+              key={exp.role}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className={`relative flex flex-col md:flex-row gap-6 md:gap-8 ${idx % 2 === 0 ? 'md:flex-row-reverse text-left md:text-right' : 'text-left'}`}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className={`relative flex flex-col md:flex-row gap-5 md:gap-16 ${
+                idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              } items-start group pb-4 md:pb-8 last:pb-0`}
             >
-              {/* Visual Marker */}
-              <div className="absolute left-6 md:left-1/2 top-0 w-5 h-5 md:w-6 md:h-6 rounded-full bg-steel dark:bg-mint border-4 md:border-4 border-white dark:border-background-dark shadow-lg -translate-x-1/2 z-10" />
+              {/* Dot Indicator - Refined size */}
+              <div className="absolute left-[15px] md:left-1/2 top-1.5 w-2 h-2 rounded-full bg-accent dark:bg-accent-light border-2 border-white dark:border-background-dark -translate-x-1/2 z-10 hidden md:block" />
 
-              <div className="md:w-1/2 pl-12 md:pl-0">
-                <div
-                  className={`group p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] bg-ghost dark:bg-navy border-2 border-transparent hover:border-steel/20 dark:hover:border-mint/30 transition-all duration-500 shadow-lg hover:shadow-steel/10`}
-                >
-                  <div
-                    className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-5 mb-4 md:mb-6 ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                  >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-white overflow-hidden p-2 md:p-2.5 flex items-center justify-center border-4 border-steel/10 shrink-0 shadow-md">
-                      <img
-                        src={exp.logo}
-                        alt={exp.company}
-                        className="max-w-full max-h-full object-contain mix-blend-multiply"
+              <div className={`w-full md:w-[42%] ${idx % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                <div className="flex flex-col gap-3">
+                  <div className={`flex items-center gap-3 ${idx % 2 === 0 ? 'md:flex-row-reverse' : 'flex-row'}`}>
+                    <div className="w-9 h-9 rounded-lg bg-zinc-100 dark:bg-zinc-800/50 flex items-center justify-center border border-zinc-200 dark:border-white/5 group-hover:bg-accent/10 dark:group-hover:bg-accent-light/10 transition-colors">
+                      <Icons.Briefcase
+                        size={16}
+                        className="text-accent dark:text-accent-light"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg md:text-xl font-black text-navy dark:text-ghost group-hover:text-steel dark:group-hover:text-mint transition-colors tracking-tight">
+                      <h4 className="text-base md:text-lg font-bold text-primary dark:text-primary-light group-hover:text-accent dark:group-hover:text-accent-light transition-colors tracking-tight uppercase leading-none">
                         {exp.role}
-                      </h3>
-                      <p className="text-steel dark:text-mint font-black text-[10px] md:text-xs uppercase tracking-widest mt-0.5">
+                      </h4>
+                      <p className="text-accent dark:text-accent-light font-bold text-[9px] md:text-[10px] uppercase tracking-widest mt-1">
                         {exp.company}
                       </p>
                     </div>
                   </div>
 
                   <div
-                    className={`mb-4 ${idx % 2 === 0 ? 'md:text-right' : 'text-left'}`}
+                    className={`mb-1 ${idx % 2 === 0 ? 'md:text-right' : 'text-left'}`}
                   >
-                    <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-lg bg-steel/10 dark:bg-steel/40 text-navy dark:text-ghost text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] border border-steel/20 dark:border-mint/20">
+                    <span className="inline-block px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800/50 text-secondary dark:text-secondary-light text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-zinc-200 dark:border-white/5">
                       {exp.period}
                     </span>
                   </div>
 
-                  <p className="text-navy/70 dark:text-ghost/80 text-xs md:text-sm leading-relaxed font-medium">
+                  <p className="text-secondary dark:text-secondary-light text-xs md:text-sm leading-relaxed font-medium">
                     {exp.description}
                   </p>
                 </div>
               </div>
-              <div className="md:w-1/2 hidden md:block" />
+              <div className="md:w-[42%] hidden md:block" />
             </motion.div>
           ))}
         </div>
